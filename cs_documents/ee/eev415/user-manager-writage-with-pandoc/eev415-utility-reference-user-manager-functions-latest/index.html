@@ -1,0 +1,5703 @@
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.68.3" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
+
+<title>EEV415 User Manager Functions (Writage with Pandoc) | My New Hugo Site</title>
+<meta name="description" content=""><meta property="og:title" content="EEV415 User Manager Functions (Writage with Pandoc)" />
+<meta property="og:description" content="EXIMBILLS © Trade Finance System Eximbills Enterprise System Version 4.1.5 EE Utility Reference: User Manager Functions February 2021     Copyright 2021 © China Systems Corporation All Rights Reserved This document is protected by United States Copyright Law and may contain Trade Secrets Information which is proprietary to China Systems Corporation. No part of this document may be copied, photocopied, reproduced, translated, distributed, or reduced to any electronic medium or machine-readable form without prior consent in writing from China Systems Corporation." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/cs_documents/ee/eev415/user-manager-writage-with-pandoc/eev415-utility-reference-user-manager-functions-latest/" />
+
+<meta itemprop="name" content="EEV415 User Manager Functions (Writage with Pandoc)">
+<meta itemprop="description" content="EXIMBILLS © Trade Finance System Eximbills Enterprise System Version 4.1.5 EE Utility Reference: User Manager Functions February 2021     Copyright 2021 © China Systems Corporation All Rights Reserved This document is protected by United States Copyright Law and may contain Trade Secrets Information which is proprietary to China Systems Corporation. No part of this document may be copied, photocopied, reproduced, translated, distributed, or reduced to any electronic medium or machine-readable form without prior consent in writing from China Systems Corporation.">
+
+<meta itemprop="wordCount" content="13767">
+
+
+
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="EEV415 User Manager Functions (Writage with Pandoc)"/>
+<meta name="twitter:description" content="EXIMBILLS © Trade Finance System Eximbills Enterprise System Version 4.1.5 EE Utility Reference: User Manager Functions February 2021     Copyright 2021 © China Systems Corporation All Rights Reserved This document is protected by United States Copyright Law and may contain Trade Secrets Information which is proprietary to China Systems Corporation. No part of this document may be copied, photocopied, reproduced, translated, distributed, or reduced to any electronic medium or machine-readable form without prior consent in writing from China Systems Corporation."/>
+
+
+
+
+<link rel="preload" href="/scss/main.min.3eaa98d78b054fcbdeaabdb54b3de52aa692244be174b753b653b32c3b9c8d5d.css" as="style">
+<link href="/scss/main.min.3eaa98d78b054fcbdeaabdb54b3de52aa692244be174b753b653b32c3b9c8d5d.css" rel="stylesheet" integrity="">
+
+
+<script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous"></script>
+
+<script
+  src="https://unpkg.com/lunr@2.3.8/lunr.min.js"
+  integrity="sha384-vRQ9bDyE0Wnu+lMfm57BlYLO0/XauFuKpVsZPs7KEDwYKktWi5+Kz3MP8++DFlRY"
+  crossorigin="anonymous"></script>
+
+
+
+
+
+  </head>
+  <body class="td-page">
+    <header>
+      
+<nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
+        <a class="navbar-brand" href="/">
+		<span class="navbar-logo"></span><span class="text-uppercase font-weight-bold">My New Hugo Site</span>
+	</a>
+	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
+		<ul class="navbar-nav mt-2 mt-lg-0">
+			
+			
+			<li class="nav-item mr-4 mb-2 mb-lg-0">
+				
+				
+				
+				
+				
+				
+				<a class="nav-link" href="/documentation/" ><i class='fa fa-book'></i><span>Documentation</span></a>
+			</li>
+			
+			
+			
+		</ul>
+	</div>
+	<div class="navbar-nav d-none d-lg-block">
+
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.dc33fe9ad0b8d092161409cda017634d.json"
+  data-offline-search-base-href="/"
+  data-offline-search-max-results="25"
+>
+
+</div>
+</nav>
+
+    </header>
+    <div class="container-fluid td-outer">
+      <div class="td-main">
+        <div class="row flex-xl-nowrap">
+          <aside class="col-12 col-md-3 col-xl-2 td-sidebar d-print-none">
+            
+
+
+
+
+  
+
+
+<div id="td-sidebar-menu" class="td-sidebar__inner">
+  
+  <form class="td-sidebar__search d-flex align-items-center">
+    
+
+
+
+<input
+  type="search"
+  class="form-control td-search-input"
+  placeholder="&#xf002; Search this site…"
+  aria-label="Search this site…"
+  autocomplete="off"
+  
+  data-offline-search-index-json-src="/offline-search-index.dc33fe9ad0b8d092161409cda017634d.json"
+  data-offline-search-base-href="/"
+  data-offline-search-max-results="25"
+>
+
+
+    <button class="btn btn-link td-sidebar__toggle d-md-none p-0 ml-3 fas fa-bars" type="button" data-toggle="collapse" data-target="#td-section-nav" aria-controls="td-docs-nav" aria-expanded="false" aria-label="Toggle section navigation">
+    </button>
+  </form>
+  
+  <nav class="collapse td-sidebar-nav" id="td-section-nav">
+    
+    
+    
+    
+    
+    <ul class="td-sidebar-nav__section pr-md-3 ul-0">
+      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m--li">
+    
+      <a href="/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-"><span class="">Documentation</span></a>
+    
+    
+      
+      <ul class="ul-1">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-cs_documents-li">
+    
+      <a href="/cs_documents/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-cs_documents"><span class="">CS Documents</span></a>
+    
+    
+      
+      <ul class="ul-2 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-cs_documentscsx-version-3-li">
+    
+      <a href="/cs_documents/csx-version-3/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-cs_documentscsx-version-3"><span class="">CSX Version 3</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-cs_documentscsx-version-4-li">
+    
+      <a href="/cs_documents/csx-version-4/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-cs_documentscsx-version-4"><span class="">CSX Version 4</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-cs_documentsce-li">
+    
+      <a href="/cs_documents/ce/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-cs_documentsce"><span class="">Customer Enterprise</span></a>
+    
+    
+      
+      <ul class="ul-3 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child" id="m-cs_documentscecev336-li">
+    
+      <a href="/cs_documents/ce/cev336/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-cs_documentscecev336"><span class="">CE Version 336</span></a>
+    
+    
+      
+      <ul class="ul-4 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-cs_documentscecev336cev336_archiving_and_recovery-li">
+    
+      <a href="/cs_documents/ce/cev336/cev336_archiving_and_recovery/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-cs_documentscecev336cev336_archiving_and_recovery"><span class="">CEV336 Archiving and Recovery (Pandoc)</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-cs_documentscecev336cev336-data-objects-li">
+    
+      <a href="/cs_documents/ce/cev336/cev336-data-objects/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-cs_documentscecev336cev336-data-objects"><span class="">CEV336 Data Objects (Pandoc)</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-cs_documentscecev336cev336-faqs-li">
+    
+      <a href="/cs_documents/ce/cev336/cev336-faqs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-cs_documentscecev336cev336-faqs"><span class="">CEV336 FAQs (Pandoc)</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-cs_documentscecev336cev336_look_and_feel-li">
+    
+      <a href="/cs_documents/ce/cev336/cev336_look_and_feel/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-cs_documentscecev336cev336_look_and_feel"><span class="">CEV336 Look and Feel (Pandoc)</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-cs_documentscecev336cev336_reports-li">
+    
+      <a href="/cs_documents/ce/cev336/cev336_reports/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-cs_documentscecev336cev336_reports"><span class="">CEV336 Reports (Pandoc)</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-cs_documentscecev336cev336_system_administration_functions-li">
+    
+      <a href="/cs_documents/ce/cev336/cev336_system_administration_functions/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-cs_documentscecev336cev336_system_administration_functions"><span class="">CEV336 System Administration Functions (Pandoc)</span></a>
+    
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-cs_documentsee-li">
+    
+      <a href="/cs_documents/ee/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-cs_documentsee"><span class="">Eximbills Enterprise</span></a>
+    
+    
+      
+      <ul class="ul-3 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-cs_documentseeeev415-li">
+    
+      <a href="/cs_documents/ee/eev415/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-cs_documentseeeev415"><span class="">EE Version 415</span></a>
+    
+    
+      
+      <ul class="ul-4 foldable">
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-cs_documentseeeev415eev415-building-a-module-master-final-li">
+    
+      <a href="/cs_documents/ee/eev415/eev415-building-a-module-master-final/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-cs_documentseeeev415eev415-building-a-module-master-final"><span class="">EEV415 Building a Module (Pandoc Multiple File Conversion)</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-cs_documentseeeev415eev415-eloan-transaction-module-final-li">
+    
+      <a href="/cs_documents/ee/eev415/eev415-eloan-transaction-module-final/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-cs_documentseeeev415eev415-eloan-transaction-module-final"><span class="">EEV415 eLOAN Transaction Module (Pandoc Multiple File Conversion)</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-cs_documentseeeev415eev415_limit_transaction_module_forwebsite-li">
+    
+      <a href="/cs_documents/ee/eev415/eev415_limit_transaction_module_forwebsite/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-cs_documentseeeev415eev415_limit_transaction_module_forwebsite"><span class="">EEV415 Limit Transaction Module (Pandoc with Manual Modification)</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-cs_documentseeeev415eev415-multi-language-reference-final-li">
+    
+      <a href="/cs_documents/ee/eev415/eev415-multi-language-reference-final/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-cs_documentseeeev415eev415-multi-language-reference-final"><span class="">EEV415 Multi-Language Reference (Pandoc Multiple File Conversion)</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-cs_documentseeeev415supplementary-functions-office2md-li">
+    
+      <a href="/cs_documents/ee/eev415/supplementary-functions-office2md/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-cs_documentseeeev415supplementary-functions-office2md"><span class="">EEV415 Supplementary Functions (Office2MD)</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-cs_documentseeeev415eev415-system-reference-final-li">
+    
+      <a href="/cs_documents/ee/eev415/eev415-system-reference-final/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-cs_documentseeeev415eev415-system-reference-final"><span class="">EEV415 System Reference (Pandoc Multiple File Conversion)</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-cs_documentseeeev415user-manager-gfm-li">
+    
+      <a href="/cs_documents/ee/eev415/user-manager-gfm/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-cs_documentseeeev415user-manager-gfm"><span class="">EEV415 User Manager Functions (Pandoc with GFM)</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-cs_documentseeeev415user-manager-mmd-li">
+    
+      <a href="/cs_documents/ee/eev415/user-manager-mmd/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-cs_documentseeeev415user-manager-mmd"><span class="">EEV415 User Manager Functions (Pandoc with MMD)</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-cs_documentseeeev415user-manager-writage-with-pandoceev415-utility-reference-user-manager-functions-latest-li">
+    
+      <a href="/cs_documents/ee/eev415/user-manager-writage-with-pandoc/eev415-utility-reference-user-manager-functions-latest/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-cs_documentseeeev415user-manager-writage-with-pandoceev415-utility-reference-user-manager-functions-latest"><span class="td-sidebar-nav-active-item">EEV415 User Manager Functions (Writage with Pandoc)</span></a>
+    
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-search-li">
+    
+      <a href="/search/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-search"><span class="">Search Results</span></a>
+    
+    
+  </li>
+
+          
+        
+      </ul>
+    
+  </li>
+
+    </ul>
+  </nav>
+</div>
+
+
+
+
+          </aside>
+          <aside class="d-none d-xl-block col-xl-2 td-sidebar-toc d-print-none">
+            
+  
+  
+  
+  
+  
+  
+  <div class="td-page-meta ml-2 pb-1 pt-2 mb-0">
+  
+  
+  </div>
+
+
+            
+
+
+
+
+            
+
+	
+		
+
+
+
+  
+  
+
+	
+		
+
+
+
+  
+  
+
+	
+
+          </aside>
+          <main class="col-12 col-md-9 col-xl-8 pl-md-5" role="main">
+            
+  
+
+            <nav aria-label="breadcrumb" class="d-none d-md-block d-print-none">
+	<ol class="breadcrumb spb-1">
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="http://example.org/cs_documents/">CS Documents</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="http://example.org/cs_documents/ee/">Eximbills Enterprise</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item" >
+	<a href="http://example.org/cs_documents/ee/eev415/">EE Version 415</a>
+</li>
+
+
+
+
+<li class="breadcrumb-item active" aria-current="page">
+	<a href="http://example.org/cs_documents/ee/eev415/user-manager-writage-with-pandoc/eev415-utility-reference-user-manager-functions-latest/">EEV415 User Manager Functions (Writage with Pandoc)</a>
+</li>
+
+	</ol>
+</nav	>
+
+            
+<div class="td-content">
+	<h1>EEV415 User Manager Functions (Writage with Pandoc)</h1>
+	
+	<header class="article-meta">
+		
+		
+			
+				
+
+
+			
+				
+
+
+			
+		
+		
+	</header>    
+	<p><img src="media/8de8b7e8e8bb185c3eadf8ad4b21b435.jpeg" alt=""></p>
+<table>
+<thead>
+<tr>
+<th>EXIMBILLS © Trade Finance System Eximbills Enterprise System Version 4.1.5 EE Utility Reference: User Manager Functions February 2021</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Copyright 2021 © China Systems Corporation</em> <em>All Rights Reserved</em> <em>This document is protected by United States Copyright Law and may contain Trade Secrets Information which is proprietary to China Systems Corporation. No part of this document may be copied, photocopied, reproduced, translated, distributed, or reduced to any electronic medium or machine-readable form without prior consent in writing from China Systems Corporation. The information in this document may be used only under the terms and conditions of separate China Systems Corporation license agreements.</em> <em>Information is subject to change without notice. China Systems Corporation makes no warranties, either expressed or implied, with respect to the software herein described as to its quality, performance, including, without limitations to, its fitness for any particular purpose.</em> <em>This document may not reflect total system capability at any subsequent date as a result of development. It is also possible that it may contain references to facilities not available on your computer system. Such references should not be construed to mean that these facilities will necessarily be made available on all types of computer hardware or in all user locations.</em> <em>China Systems Corporation accepts no responsibility or liability for any damages or loss of business or revenue due to the use of this document.</em> <em>All trademarks, registered trademarks and trade names mentioned in this document are the sole property of their respective holders.</em></td>
+</tr>
+<tr>
+<td>ORDER MORE EXIMBILLS DOCUMENTATION Additional copies of Documentation are available for purchase from China Systems Corporation or through your local EXIMBILLS Support Office.</td>
+</tr>
+<tr>
+<td><img src="media/1d31d7bf8a855f52440440d28230adb9.jpeg" alt="csliit"> CHINA SYSTEMS CORPORATION Comments may be addressed to: <a href="mailto:corporatedocs@chinasystems.com">corporatedocs@chinasystems.com</a> China Systems Corporation Ltd. Corner House, 20 Parliament Street Hamilton HM12 Bermuda</td>
+</tr>
+</tbody>
+</table>
+<p>Table of Contents</p>
+<p><a href="#_Toc63427240">EE Documentation Library	5</a></p>
+<blockquote>
+<p><a href="#_Toc63427241">EE Documentation Library	6</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427242">Core System Manuals	6</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427243">EE Utility References	10</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427244">Installation Guide	11</a></p>
+</blockquote>
+<p><a href="#_Toc63427245">Introduction	12</a></p>
+<blockquote>
+<p><a href="#_Toc63427246">System Overview	13</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427247">Manual Overview	14</a></p>
+</blockquote>
+<p><a href="#_Toc63427248">Using the EE Utility	15</a></p>
+<blockquote>
+<p><a href="#_Toc63427249">Running the EE Utility	16</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427250">Preparing the EE Utility Files	16</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427251">Accessing the EE Utility	18</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427252">Navigating the EE Utility Interface	22</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427253">EE Utility Functions	23</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427254">Menu Bar	25</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427255">Toolbar Buttons	37</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427256">Popup Menu	42</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427257">Other EE Utility Features	44</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427258">Generating the XML Parameter Files	55</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427259">Building an EE Module	60</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427260">Basic Steps	61</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427261">Function Relation	75</a></p>
+</blockquote>
+<p><a href="#_Toc63427262">The User Manage Function Group	78</a></p>
+<blockquote>
+<p><a href="#_Toc63427263">User Manager Functions	79</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427264">Audit Log	81</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427265">Filtering Logs	90</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427266">Restoring Parameters	103</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427267">Exporting Logs to an Excel File	109</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427268">Viewing DB Dictionary Log Details	112</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427269">User Manage	114</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427270">Creating New Users	115</a></p>
+</blockquote>
+<blockquote>
+<p><a href="#_Toc63427271">Assigning Functions to Users	121</a></p>
+</blockquote>
+<p><a href="#_Toc63427272">Glossary	124</a></p>
+<blockquote>
+<p><a href="#_Toc63427273">Glossary	125</a></p>
+</blockquote>
+<p>EE Documentation Library</p>
+<p>EE Documentation Library</p>
+<p>The EE Documentation Library lists all available manuals that serve as
+references on the use of the EE system. The documents are categorized into three
+groups: Core System Manuals, EE Utility References, and Installation Guides.</p>
+<blockquote>
+<p>Core System Manuals</p>
+</blockquote>
+<blockquote>
+<p>The EE Core System manuals provide information on the setup and
+configuration of various EE parameters, as well as the implementation of
+supplementary functionalities supported by the system.</p>
+</blockquote>
+<p>Archiving and Recovery</p>
+<p>This manual is a reference to the Archive and Recovery functionality of the EE
+system. Discussions include the required parameter settings for configuring the
+relevant functions, as well as examples of how this functionality is used in
+transaction processes. The archiving functions discussed in this manual are
+Archive Data, Inquire Archived Data, Restore Archived Data, Delete Archived
+Data, and End of Month functions.</p>
+<p>BIRT Report Engine</p>
+<p>This manual discusses the requirements and processes involved in applying the
+built-in BIRT report engine of EE to build transaction functions that generate
+BIRT reports and documents. Other functionalities, such as configuring a report
+batch function and defining rules to attach documents to an outgoing e-mail, are
+covered as well.</p>
+<p>Building a Module</p>
+<p>This manual is designed to help new users of EE plan, organize, control, and
+successfully carry out the implementation of the system. It provides a general
+description of the different features of EE that enable every bank to build and
+design business modules according to its processing requirements. This manual
+discusses how a custom business module in EE can be built and adapted. It
+includes step-by-step procedures on how to build a module as well as an overview
+of runtime transaction processing.</p>
+<p>Charges and Commissions Reference</p>
+<p>This document provides extensive discussions on the setup and usage of the
+Charges and Commissions component of EE. Instructions include setting up
+parameters, defining the relevant standing data, and using charge-specific
+calculation methods.</p>
+<p>Data Objects</p>
+<p>This manual describes in detail the steps and procedures required in building
+and utilizing a data object, which is a logical object that has its own
+attributes and calculation rules. Instructions on customizing the DO screen
+interface, navigating the data object screen, and using data objects in
+transaction processes are also provided.</p>
+<p>eLOAN Transaction Module</p>
+<p>This document provides extensive discussions on EE’s eLOAN sub-system. Topics
+include eLOAN functions from the eLOAN Transaction Module and the EE Standing
+Data Module.</p>
+<p>FAQs</p>
+<p>This document addresses commonly asked questions about the EE system. This
+includes answers to issues related to browser-side processing, EE Utility, EE
+database, Security Manager, and other issues that may arise while operating and
+configuring settings within the EE environment. Some system features and
+capabilities are discussed as well.</p>
+<p>GAPI Integration</p>
+<p>This manual is a comprehensive reference guide on setting up the required
+parameters for sending and receiving GAPI messages. It includes instructions on
+the configuration of related functionalities and auxiliary operations, as well
+as discussions on actual transaction processing.</p>
+<p>Limit Management Module</p>
+<p>This document provides extensive discussions on the Limits sub-system of EE. The
+manual is divided into two parts:</p>
+<ul>
+<li>
+<p>The first part discusses all the browser functions of the Limit Management
+module.</p>
+</li>
+<li>
+<p>The second part discusses the required parameter settings to integrate
+Limits settings and data with a business module.</p>
+</li>
+</ul>
+<p>Limit Transaction Module</p>
+<p>This document provides extensive discussions on running and using the functions
+of the Limit Transaction module.</p>
+<p>Log Settings</p>
+<p>This manual provides instructions on defining EE log settings and configuring
+parameters to set up log functions. Generating logs on different modes and
+checking the different log directories are discussed as well.</p>
+<p>Multi-Entity Reference</p>
+<p>This manual is a guide to the multi-entity structure of the EE system. This
+includes a discussion on the composition of the system in relation to this
+structure. EE also supports the use of a single and default domain; a
+supplementary section is provided for this.</p>
+<p>Multi-Language Reference</p>
+<p>This manual provides instructions on defining language records and configuring
+the multi-language settings in the EE Utility and EE browser. With this
+multi-language functionality, users are able to access the EE system in their
+preferred language.</p>
+<p>Payment Component Reference</p>
+<p>This document provides extensive discussions on the setup and usage of the
+different Payment component types: Payment Terms, Payment Schedule, Payment
+Instruction Dealer, and Payment Dealer. Topics include parameter settings and
+Payment-specific calculation methods.</p>
+<p>Security Manager</p>
+<p>This manual is a comprehensive guide to security management in the EE system. As
+such, it includes instructions on the setup of user profiles, user functions,
+business units, business unit functions, user and business unit assignments, and
+other security-related operations.</p>
+<p>Service Level Agreement Reference</p>
+<p>This document is a reference to the Service Level Agreement (SLA) functionality
+of EE the system, which pertains to a group of settings that control the flow of
+transaction steps and processes. It is divided into two major sections: Basic
+Data, for the functions used in the creation and maintenance of SLA standing
+data; and System Operations, for the functions used in SLA enquiry, business
+task initialization, and end time adjustments. A sample SLA process is also
+provided.</p>
+<p>Standing Data Module</p>
+<p>This document discusses the functions for the standing data of the EE system.
+Among these are rate descriptions, exchange rates, interest rates, account
+numbers, currencies, weekend data, holiday data, clauses, reference number
+rules, authorization standing data, and time zone data. Descriptions, input
+details, and processing steps are included in the function discussions.</p>
+<p>Supplementary Functions</p>
+<p>This manual is a reference in configuring the parameter settings to define
+special or supplementary EE functionalities such as the Compliance Check and
+invoice uploading features.</p>
+<p>SWIFT Configuration</p>
+<p>This document provides extensive discussions on the primary components required
+in defining SWIFT messages: the SWIFT template and the SWIFT message rule. The
+complete parameter settings and external configurations required for enabling EE
+to exchange messages with the SWIFT network are detailed in comprehensive
+procedures. This manual is supplemented with sections on SWIFT-related system
+parameters and miscellaneous functions.</p>
+<p>System Administration Functions</p>
+<p>This manual is a reference for Super Administrator users of the EE Utility in
+the configuration and maintenance of the EE environment. Sections of this
+reference include instructions on the use of specific User Manage and Parameter
+Manage functions.</p>
+<p>System Maintenance Module</p>
+<p>This document discusses the functions provided in the System Maintenance module
+of the EE system. This includes sections on the maintenance processes for daily
+operations, authorization rule settings, EDI messages, SWIFT messages, XML
+messages, log files, and documents.</p>
+<p>System Reference</p>
+<p>This manual is a reference for the following elements provided in the EE Utility
+for parameterization: security parameters, system parameters, components, server
+side system methods, calculation methods, and XML Generator items.</p>
+<p>Version Control</p>
+<p>This manual discusses the settings in maintaining the different versions of
+parameters.</p>
+<blockquote>
+<p>EE Utility References</p>
+</blockquote>
+<blockquote>
+<p>The EE Utility set of reference manuals is a guide on the use of the EE
+Utility Workbench, or simply EE Utility. These references discuss every
+function or feature of the EE Utility and provide instructions on how to
+operate or use the function in relation to operating and maintaining the EE
+system and processing a business transaction.</p>
+</blockquote>
+<blockquote>
+<p>A manual is provided for each major function group of the EE Utility: User
+Manage, Parameter Manage, System Function, Transaction Function, and
+Maintenance.</p>
+</blockquote>
+<blockquote>
+<p><img src="media/484376c5e28e6fece5e429cfb2f6d578.gif" alt="">NOTE: The TSU Parameter
+Manage function group is comprised of functions used for configuring,
+managing and maintaining parameters for the TSU (or Open Account) module.
+For information on the TSU module, refer to the EE Baseline TSU
+documentation.</p>
+</blockquote>
+<p>EE Utility Reference: User Manager Functions</p>
+<p>This manual is a comprehensive guide for the Administrator and Operator user on
+the use and configuration of the functions belonging to the User Manage function
+group of the EE Utility. This includes functions for user profiles and audit
+logs.</p>
+<p>EE Utility Reference: Parameter Manager Functions</p>
+<p>This manual is a reference on the use and configuration of the functions that
+belong to the Parameter Manage function group of the EE Utility and that are
+accessible to Administrator and Operator users. These are system-wide functions
+used for creating and maintaining system parameters, components, and calculation
+rules, among others.</p>
+<p>EE Utility Reference: System Functions</p>
+<p>This manual includes information on the configuration of the functions belonging
+to the System Function group of the EE Utility. The functions in this group are
+used to maintain settings that facilitate system-wide tasks and operations;
+among these are function groups, output devices, protocol managers, and STP
+settings.</p>
+<p>EE Utility Reference: Transaction Functions</p>
+<p>This manual provides discussions on the configuration of the functions belonging
+to the Transaction Function group of the EE Utility. These functions are used
+for defining and setting up the actual business parameters of transaction
+functions.</p>
+<p>EE Utility Reference: Maintenance Functions</p>
+<p>This manual is a comprehensive guide on the use and configuration of the
+functions belonging to the Maintenance function group of the EE Utility. These
+functions are used for maintaining the tables, fields, and files that are used
+in the EE Utility.</p>
+<blockquote>
+<p>Installation Guide</p>
+</blockquote>
+<blockquote>
+<p>An EE installation guide is a reference on the installation and setup
+processes of the EE system on a specific application server and database.</p>
+</blockquote>
+<p>Installation Guide WAS 9.0 - Oracle 12c</p>
+<p>This is a reference for installing the EE system on WebSphere Application Server
+Version 9.0.5.5, with an Oracle 12c database. This includes detailed
+instructions on configuring the components that are required to successfully run
+EE.</p>
+<p>Introduction</p>
+<ul>
+<li>
+<p>SYSTEM OVERVIEW</p>
+</li>
+<li>
+<p>MANUAL OVERVIEW</p>
+</li>
+<li></li>
+</ul>
+<p>System Overview</p>
+<p>The Eximbills Enterprise Utility Workbench, or EE Utility, is the main
+parameter-setting tool of the Eximbills Enterprise (EE) system. It is used to
+define the parameters and rules that are required to carry out business
+operations and system tasks in EE. These parameters and rules instruct the
+system on how to control, manage, and process the business data that it
+receives. Using the EE Utility, parameters may be customized according to
+specific business requirements.</p>
+<p>The EE Utility is managed by three types of users: Super Administrator,
+Administrator, and Operator. System administration tasks, such as configuring
+business units, defining data sources, and setting security parameters may be
+performed only by the Super Administrator users. Administrator and Operator
+users, on the other hand, manage and process transaction functions and the
+actual data that the business unit manages. Additionally, Super Administrator
+users may create Administrator and other Super Administrator users, while
+Administrator users may create Operator and other Administrator users.</p>
+<p>For easier navigation, the functions in the EE Utility are organized into the
+following function groups:</p>
+<ul>
+<li>
+<p>User Manage – Functions belonging to this group are used to define the
+business units, data source settings, user profiles, and function
+assignments of each user.</p>
+</li>
+<li>
+<p>Parameter Manage – Functions belonging to this group are used to create and
+maintain system-wide transaction parameters.</p>
+</li>
+<li>
+<p>System Function – Functions belonging to this group are used to maintain and
+facilitate system-wide tasks.</p>
+</li>
+<li>
+<p>Transaction Function – Functions belonging to this group are used to define
+the actual business parameters of transaction functions.</p>
+</li>
+<li>
+<p>Maintenance Function – Functions belonging to this group are used to
+maintain the tables, fields, and files that are used in the EE Utility.</p>
+</li>
+</ul>
+<p>The User Manage function group, which is discussed in this reference, is
+accessible only to Super Administrator and Administrator users with the
+appropriate function access rights.</p>
+<blockquote>
+<p><img src="media/dbcc08f02d55bf00c6d727f95e13c20c.png" alt="note">NOTE:</p>
+</blockquote>
+<blockquote>
+<p>i. When the logon profile that is used to log on the EE Utility is a Super
+Administrator profile, the Security data source and its corresponding
+security functions are accessed. If the logged on user is an administrator
+or operator, the data source that is being accessed is the Meta data source.</p>
+</blockquote>
+<blockquote>
+<p>ii. The settings that are defined by a super administrator in the EE Utility
+define certain scopes and limitations of parameters that apply in the
+browser side of the EE system.</p>
+</blockquote>
+<p>Manual Overview</p>
+<blockquote>
+<p>Purpose</p>
+</blockquote>
+<p>This manual is a comprehensive guide for the Administrator and Operator user on
+the use and configuration of the functions that belong to the User Manage
+function group of the EE Utility and are accessible to Administrator and
+Operator users. This includes functions for user profiles and audit logs.</p>
+<p>The use of each of these functions is described in separate sections of this
+manual. Discussions include the required information, settings, and steps to
+operate these functions.</p>
+<blockquote>
+<p>Audience</p>
+</blockquote>
+<p>This document is written specifically for, but not limited to, the following
+users:</p>
+<ul>
+<li>Consultants tasked with maintaining Administrator and Operator user profiles
+and audit logs</li>
+</ul>
+<blockquote>
+<p>Prerequisites</p>
+</blockquote>
+<blockquote>
+<p>Sufficient knowledge of the system is required including building basic
+parameters.</p>
+</blockquote>
+<p>Suggested titles before reading this manual:</p>
+<ul>
+<li>
+<p><em>EE Building a Module</em></p>
+</li>
+<li>
+<p><em>EE Installation Guide</em></p>
+</li>
+</ul>
+<blockquote>
+<p><strong><img src="media/13099c096d4831a51504e46c0b962a98.gif" alt="note">NOTE:</strong> Some features
+discussed in this manual have been tested and documented based on an older
+system version. Unless otherwise specified, the overall functionality is the
+same when recreated in the current version.</p>
+</blockquote>
+<p>Using the EE Utility</p>
+<ul>
+<li>
+<p>Running the EE Utility</p>
+</li>
+<li>
+<p>Generating the XML Parameter Files</p>
+</li>
+<li>
+<p>Building an EE Module</p>
+</li>
+<li></li>
+<li></li>
+</ul>
+<p>Running the EE Utility</p>
+<p>The Eximbills Enterprise Utility Workbench, or EE Utility, is the main tool for
+building parameters in EE.</p>
+<blockquote>
+<p>Preparing the EE Utility Files</p>
+</blockquote>
+<blockquote>
+<p>Along with the installation files, the EE Utility folder is provided with
+every EE system release.</p>
+</blockquote>
+<blockquote>
+<p>Prior to using the EE Utility, do the following:</p>
+</blockquote>
+<ol>
+<li>
+<p>Copy the EE Utility folder to the local drive.</p>
+</li>
+<li>
+<p>Edit the CSUtility.bat file in the EE Utility folder, define the \BIN path
+of the JDK program.</p>
+<p>**EXAMPLE:</p>
+<p>**path = C:\Program Files\Java\jdk1.8.0_181\bin</p>
+<p><strong><img src="media/13099c096d4831a51504e46c0b962a98.gif" alt="note">NOTE:</strong></p>
+<p>i. For EE Version 2.5.0 and higher, the EE Utility supports JDBC thin. It is
+therefore not required to define the path of the Oracle database. For more
+information on JDBC Thin, refer to this discussion: <a href="#jdbcthin">EE Utility Supports
+JDBC Thin</a>.</p>
+<p>ii. The Java Standard Edition Development Kit (JDK) program must already be
+installed on the EE machine prior to the configuration of EE Utility. For
+detailed information on installing EE, refer to the EE installation guides.</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><strong>EE Utility Supports JDBC Thin</strong> The EE Utility supports JDBC thin. As such, it can connect to the Oracle database without adding information in the Net Manager. These are the advantages of using JDBC thin: The EE Utility may be used to connect to the Oracle database without installing an Oracle client. The EE Utility may be used to connect to the same database name on a different server.  <strong>EXAMPLE:</strong> The EE Utility may connect to both EEDB EE400, and EEDB 192.168.0.246, which have similar database names but are on different servers. It is not required to delete one database from the Net Manager before being able to use the other database with the same name.  <img src="media/9798195883ebe7f36fe51fbec66f7059.png" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Accessing the EE Utility</p>
+</blockquote>
+<blockquote>
+<p>The main program for accessing the EE Utility program is the CSUtility.bat
+file. This file is located in the EE Utility folder.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Do the following …</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>1. Run the CSUtility batch program to access the EE Utility.  <strong>NOTE:</strong> i. A shortcut to the CSUtility batch file can be created on the desktop for easy access. ii. The EE Utility folder provides external tools that can be used for simulating or testing parameters and other parameter-related settings. These tools or functions are contained in the externalTools sub-folder. Refer to the <em>EE FAQs</em> manual for more information.</th>
+<th></th>
+<th><img src="media/9b4891a334354fe7966fbb8547c4251c.png" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2. The logon window of the EE Utility is displayed. To define the database information, click on the Profile button.</td>
+<td></td>
+<td><img src="media/bedd741a7855312280f9c0350a0e3361.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3. In the Database Information dialog box that is displayed, specify the required database information and click on the Save button.</td>
+<td></td>
+<td><img src="media/01da2caa6ac1ff5cf7a86c8e77fc3327.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4. A confirmation message is displayed. Click on the OK button.</td>
+<td></td>
+<td><img src="media/5e6b751146d63dfcf0f6921e3c7f5822.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>NOTE:</strong>  This new data source setting is saved in the UserInfo.xml file in the EE Utility directory.</td>
+<td></td>
+<td><img src="media/db086cd539c9ba63c63c3743606ca29a.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5. The relevant username and password may then be specified for logging on the EE Utility. The default usernames and passwords for the EE Utility users are as follows: Super Administrator User ID: super_admin Password: baselines  Administrator User ID: Admin Password: 11111111  Operator  User ID: operator Password: 11111111  <strong>NOTE:</strong>  For information on defining EE Utility user profiles, refer to the <em>EE System Administration Functions</em> manual.</td>
+<td></td>
+<td><img src="media/0166e246bb45c9d5760665d7257d8a45.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6. The EE Utility window is displayed.</td>
+<td></td>
+<td><img src="media/6f1b30b38bb2a59c0dd011d8f5fbfd02.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7. A function is accessed by opening the relevant function group and clicking on the function name.    <strong>NOTE:</strong> A user may only access and utilize the functions assigned to him. For more information, refer to the <em>EE Utility Reference – User Manager Functions</em> manual and the <em>EE System Administration Functions</em> documentation.</td>
+<td></td>
+<td><img src="media/85454fd3393eb9a8b3623721516dda9e.png" alt=""></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Navigating the EE Utility Interface</p>
+</blockquote>
+<blockquote>
+<p>When the EE Utility is accessed, the functions that may be used for setting
+up parameters are displayed. Additionally, shortcuts are provided for these.</p>
+</blockquote>
+<blockquote>
+<p>The EE Utility interface also provides ways by which parameters can be
+created, edited, deleted, or linked to other operations: menu bar, toolbar
+buttons, and popup menu.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><img src="media/ede7edadb4c67814c32ac39effc8e8ea.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<p><strong>Figure 2. 1 The EE Utility Interface</strong></p>
+<blockquote>
+<p><img src="media/13099c096d4831a51504e46c0b962a98.gif" alt="note"><strong>NOTE:</strong></p>
+</blockquote>
+<blockquote>
+<p>i. A function is only displayed, and its corresponding button or menu option
+enabled, if the user has been given the right to access this function. Some
+options and functions are only available to Super Administrator users, while
+others are only accessible to Administrator and Operator users. For
+information on creating EE Utility users and assigning function access
+rights to users, refer to the <em>EE System Administration Functions</em>
+documentation.</p>
+</blockquote>
+<blockquote>
+<p>ii. For information on EE Utility functions, refer to the EE Utility
+Reference manuals.</p>
+</blockquote>
+<blockquote>
+<p>EE Utility Functions</p>
+</blockquote>
+<blockquote>
+<p>The parameter-setting functions in the EE Utility are organized together
+into several function groups. The available function groups and their
+corresponding functions are as follows.</p>
+</blockquote>
+<p>User Manage Function Group</p>
+<p>This function group consists of functions used for defining and modifying
+business unit settings, data source settings, and EE Utility user settings.
+These functions are:</p>
+<ul>
+<li>
+<p>Business Unit Config</p>
+</li>
+<li>
+<p>Data Source Manage</p>
+</li>
+<li>
+<p>User Manage</p>
+</li>
+<li>
+<p>Audit Log</p>
+</li>
+</ul>
+<p>Parameter Manage Function Group</p>
+<p>This function group is comprised of functions used for managing and maintaining
+system parameters, components, calculation rules, and language settings. These
+are used in EE, for both system and transaction processes. These functions are:</p>
+<ul>
+<li>
+<p>Component Manage</p>
+</li>
+<li>
+<p>Calculation</p>
+</li>
+<li>
+<p>Language Configuration</p>
+</li>
+<li>
+<p>System Parameter</p>
+</li>
+<li>
+<p>Security Parameters</p>
+</li>
+<li>
+<p>Server</p>
+</li>
+<li>
+<p>User Class</p>
+</li>
+<li>
+<p>User Authority</p>
+</li>
+</ul>
+<p>System Function Group</p>
+<p>This function group is comprised of functions used for facilitating system-wide
+tasks and operations such as domains, output devices, and STP settings. These
+functions are:</p>
+<ul>
+<li>
+<p>Function Group</p>
+</li>
+<li>
+<p>Domain</p>
+</li>
+<li>
+<p>Output Device</p>
+</li>
+<li>
+<p>Protocol Manager</p>
+</li>
+<li>
+<p>STP Setting</p>
+</li>
+<li>
+<p>Say Total</p>
+</li>
+</ul>
+<p>TSU Parameter Manage Function Group</p>
+<p>This function group is comprised of functions used for configuring, managing,
+and maintaining parameters (e.g., JS and STP settings) for the TSU module. These
+functions are:</p>
+<ul>
+<li>
+<p>TSU Server Setting</p>
+</li>
+<li>
+<p>Thread JS Setting</p>
+</li>
+<li>
+<p>Relation Mapping</p>
+</li>
+<li>
+<p>TSU STP Setting</p>
+</li>
+</ul>
+<p>Transaction Function Group</p>
+<p>This function group is comprised of functions used for defining the actual
+business parameters of transaction functions; these facilitate the maintenance
+and processes of the business transaction modules. These functions are:</p>
+<ul>
+<li>
+<p>Accounting Rules</p>
+</li>
+<li>
+<p>Amount/ Rate Format</p>
+</li>
+<li>
+<p>Archiving</p>
+</li>
+<li>
+<p>Attribute</p>
+</li>
+<li>
+<p>Batch Manage</p>
+</li>
+<li>
+<p>Catalog</p>
+</li>
+<li>
+<p>Clause</p>
+</li>
+<li>
+<p>Event Driven</p>
+</li>
+<li>
+<p>EDI Form</p>
+</li>
+<li>
+<p>Export Setting</p>
+</li>
+<li>
+<p>Form</p>
+</li>
+<li>
+<p>GAPI Setting</p>
+</li>
+<li>
+<p>Get CUBK</p>
+</li>
+<li>
+<p>Get DO DATA</p>
+</li>
+<li>
+<p>Message Broker Setting</p>
+</li>
+<li>
+<p>Module &amp; Event</p>
+</li>
+<li>
+<p>Report Template</p>
+</li>
+<li>
+<p>Screen</p>
+</li>
+<li>
+<p>Server Side JS</p>
+</li>
+<li>
+<p>Subtask</p>
+</li>
+<li>
+<p>SWIFT</p>
+</li>
+<li>
+<p>System Maintain</p>
+</li>
+<li>
+<p>Message Mapping</p>
+</li>
+<li>
+<p>Transfer To</p>
+</li>
+<li>
+<p>Transaction Function</p>
+</li>
+</ul>
+<p>Maintenance Function Group</p>
+<p>This function group is comprised of functions used for maintaining the tables,
+fields, and files that are used in the EE Utility. These functions are:</p>
+<ul>
+<li>
+<p>DB Dictionary</p>
+</li>
+<li>
+<p>Multi Language</p>
+</li>
+<li>
+<p>Field Conversion</p>
+</li>
+<li>
+<p>XML Generator</p>
+</li>
+<li>
+<p>Copy Module</p>
+</li>
+<li>
+<p>Data Dictionary Mapping</p>
+</li>
+<li>
+<p>Version Control Tool</p>
+</li>
+<li>
+<p>Handwriting Editor</p>
+</li>
+<li>
+<p>SOA Setting</p>
+</li>
+<li>
+<p>SOA Calculation</p>
+<p>Menu Bar</p>
+<p>The options on the menu bar are shortcuts to both the common and specific
+functions and tasks of the system.</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><img src="media/30545c76bce1ce368bdeab5ad03c6425.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<p><strong>Figure 2. 2 Menu Bar</strong></p>
+<table>
+<thead>
+<tr>
+<th>Menu</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>File</strong></th>
+<th></th>
+<th>The available options from the File menu are: New: This is used for creating a new parameter or rule. Save: This is used for saving a created or modified setting. Close Function: This is used for closing the current function window. Log Off: This is used for logging off the system without exiting the EE Utility. Exit: This is used for closing the system window and exiting the EE Utility.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Edit</strong></td>
+<td></td>
+<td>The available options from the Edit menu are: Add: This is used for adding a setting for the selected function or parameter. Delete: This is used for deleting or removing an existing setting. Edit: This is used for editing or modifying an existing setting. Copy: This is used for copying or duplicating a selected setting.  Lock: This is used for locking a parameter or setting to a specific user. Unlock: This is used for unlocking a locked parameter or setting.  Find: This is used for finding a specific setting.  <strong>NOTE:</strong> The Lock option is used to manually lock a parameter or setting to prevent another user from modifying it at the same time. A locked parameter may only be unlocked either manually (through the Unlock option) by the same user that locked the transaction, or automatically by the system, once the same user closes, cancels, or saves the parameter setting.  Refer to the succeeding sections of this manual for more information on the process of locking and unlocking a parameter.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Function</strong></td>
+<td></td>
+<td>The available options from the Function menu are: User Manage, which displays options for running User Manager functions. Parameter Manage, which displays options for running Parameter Manager functions. System Function, which displays options for running System functions. TSU Parameter Manage, which displays options for running TSU Parameter Manager functions. Transaction Function, which displays options for running Transaction functions. Maintenance, which displays options for running Maintenance functions.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Tools</strong></td>
+<td></td>
+<td>The available options from the Tools menu are: Toolbar: When this option is selected, the basic toolbar is displayed on the EE Utility window. Function Toolbar: When this option is selected, the function toolbar is displayed on the EE Utility window.   <strong>NOTE:</strong>  The Set User Profile DB Info option is <em>reserved for future</em> <em>use</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>House Keeping</strong></td>
+<td></td>
+<td>The available option from the House Keeping menu is: Housekeeping: This option is used to check whether there are unused data objects (unused in transaction JSP files and DO relation settings) and fields (unused in transaction JSP files, transaction tables, and data objects) that are listed in the Data Dictionary.  <strong>NOTE</strong>: Refer to the following <a href="#clearingjunkdata">Clearing Junk Data</a> section.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Help</strong></td>
+<td></td>
+<td>The available option from the Help menu is: About Eximbill: When this option is selected, the About Eximbills Enterprise window is displayed. This window indicates the version information of EE.  <strong>NOTE:</strong>  The Help Topics – Content Help option is <em>reserved for future use</em>.   <img src="media/966778adbbff131b1ca9296179ad8723.png" alt=""></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Clearing Junk Data</strong> The data created and utilized when setting parameters in the EE Utility are stored in the EE database, whether these are used or not. Fields and data objects, for instance, may be attached or added to module tables through the DB Dictionary function. Some of these fields and data objects are not used anymore, or are not used at all. These, however, still consume storage space in the database. To make sure the database is cleared of unnecessary or unused data, the House Keeping function in the EE Utility is provided. The House Keeping function, which is accessed through the menu bar, is basically used to check for unused fields and data objects and export the check result. Specifically, it checks if the following types of parameters including DO relation and function relation settings have been defined for fields and data objects: Accounting Rules Amount/Rate Format Calculation - Common Data Object Calculation - Common Data Object - DO&rsquo;s Field&rsquo;s Method Calculation - Common Data Object - DO&rsquo;s Method Calculation - Function Level - DO Relation Calculation - Function Level - DO Relation - DO&rsquo;s Field&rsquo;s Method Calculation - Function Level - DO Relation - DO&rsquo;s Method Calculation - Function Level - Field Method Calculation - Function Level - Field Method - DO Field Calculation - Function Level - Function Methods Calculation - Function Level - Function Methods - DO Field Confirm Server Side JS Initial Server Side JS Transaction Server Side JS Get DO Data Transaction Function Extension Screen Transaction Function Ignore DO Field Transfer To DB Dictionary Module Table     To use the House Keeping function:  Log on the EE Utility and run the House Keeping function from the menu bar. <img src="media/26dae380c2e2012df8e8f53c73eb88ad.png" alt="">  The House Keeping window is displayed. Mark the corresponding flag of the data type to be checked (e.g., Data Object). Click on the Action button. <img src="media/c8c8601d0c0f1cd7551d7201becaa4bd.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<ol>
+<li>In the Parameter Check window that is displayed, click on the Check button
+to proceed. The system starts filtering the data.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><img src="media/1e833473ad149998807bc61f3a9e9651.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<ol>
+<li>All unused data objects are listed in the grid. The total number of
+retrieved data is also displayed on the Parameter Check window.</li>
+</ol>
+<blockquote>
+<p><img src="media/632abb18c97eb3c0ef0df2c978e0b8d0.png" alt=""></p>
+</blockquote>
+<p><strong>NOTE:</strong></p>
+<blockquote>
+<p>i. If the system displays several results, the Previous and Next buttons may
+be used to view the items. These buttons are enabled only when both Data
+Object and Field are selected for the House Keeping process.</p>
+</blockquote>
+<blockquote>
+<p>ii. If a data object is added to a table or if a calculation setting is
+defined for a data object, the data object is not included in the list of
+unused data in the Parameter Check window.</p>
+</blockquote>
+<ol>
+<li>To export the result of the check, mark the corresponding flag of the
+results to be included in the generated file and click on the Export button.
+The Select All, Select, Clear All, and Clear buttons may also be used
+accordingly.</li>
+</ol>
+<blockquote>
+<p><img src="media/650cc6a3fe4f1d6ded6cb39922e09b6f.png" alt=""></p>
+</blockquote>
+<ol>
+<li>Specify the path where the file is to be exported.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><img src="media/18f2ec3ca39ef4bffeb2cd6cc6fd1019.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<ol>
+<li>The Unused Data Object XLS file is generated on the specified path. This
+file contains information on the unused data objects.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th><img src="media/c8ef6507f1ab48ed08bf2bf5632f1514.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<ol>
+<li>Click on the Cancel button once done.</li>
+</ol>
+<p><img src="media/18f2ec3ca39ef4bffeb2cd6cc6fd1019.png" alt=""></p>
+<ol>
+<li>A confirmation message is displayed. Click on the Yes button to exit the
+Parameter Check window.</li>
+</ol>
+<p><strong>EXAMPLE:</strong></p>
+<p>In the DB Dictionary function, create a data object entity: DOC_DO.</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/f06df6d6ee13e64388217efb6f454b55.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<p>Add this DO to a module table and reformat the table.</p>
+<blockquote>
+<p><img src="media/2e96892c3c33fdd2fb7cec83dd40b79e.png" alt=""></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th></th>
+</tr>
+</thead>
+</table>
+<p>Run the House Keeping function and select Data Object in the House Keeping
+window.</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/4871842f2a90fe251a5677e7583dd971.png" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>The system only displays the data objects that are not used in any parameter
+setting.</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/7beadbc9d4ba386903d0910c9288beae.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<p>Delete the data object from the module table and run the Reformat process.</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/e9342f0bfae75d878f5662265687fbf7.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<p>Run the House Keeping function again. The system displays the data objects that
+are not used. Since the DOC_DO data object has been removed from the DOCS_MASTER
+table and no other settings are defined for it, it is included in the list.</p>
+<p><img src="media/d22b2b939a2c5bd61cf0485ff3b18bf2.png" alt=""></p>
+<blockquote>
+<p>Toolbar Buttons</p>
+</blockquote>
+<blockquote>
+<p>There are two kinds of toolbars in the EE Utility: the basic toolbar and the
+function toolbar.</p>
+</blockquote>
+<p>Basic Toolbar</p>
+<p>The following standard buttons are available on the EE Utility window. These are
+used for performing the basic and common tasks of the system.</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/30a0f4d6d3d7ad983aff67c3a8967bca.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<p><strong>Figure 2. 3 Basic Toolbar Buttons</strong></p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong><img src="media/846d0af8ca12e9a8fa9c669513fa0524.png" alt=""> New</strong></th>
+<th></th>
+<th>This button is used for creating a new parameter or rule.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/a7cfcf5a4c996d8231ef2915d4d3c28a.png" alt=""> Add</strong></td>
+<td></td>
+<td>This button is used for adding a setting for the selected function or parameter.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/d90ffd60d8e84e126e1479f211749607.png" alt=""> Save</strong></td>
+<td></td>
+<td>This button is used for saving a created or modified setting.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/699d1021792bee1099e6324a586160c4.png" alt=""> Edit</strong></td>
+<td></td>
+<td>This button is used for editing or modifying an existing setting.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/39887e108bb8e78e4870d6e3a664f26a.png" alt=""> Copy</strong></td>
+<td></td>
+<td>This button is used for copying or duplicating a selected setting.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/aee1213e6de71f8eb2426d58a3e492fe.png" alt=""> Delete</strong></td>
+<td></td>
+<td>This button is used for deleting or removing an existing setting.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/910266277f6e74b96ccc1f5298d6e35a.png" alt=""> Find</strong></td>
+<td></td>
+<td>This button is used for finding an existing setting.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/50860eb8e68e3df744a249579283f399.png" alt=""> Lock</strong></td>
+<td></td>
+<td>This button is used for locking a parameter or setting to a specific user. See also the Lock option in the Edit menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/3dcbc24208ebd4c2d2712de1453c71c3.png" alt="">Unlock</strong></td>
+<td></td>
+<td>This button is used for unlocking a locked parameter or setting. See also the Unlock option in the Edit menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/a0db9109d0679e4698fcd8d64062bb0b.png" alt=""> Close</strong></td>
+<td></td>
+<td>This button is used for closing the current function window.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/0e7b74e82e9d71017d7b4091aab5bcd0.png" alt=""> Help Topic</strong></td>
+<td></td>
+<td>This button is <em>reserved for future use</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/510dc78251a8f907e8cd8869b542c0a2.png" alt="">About Eximbills</strong></td>
+<td></td>
+<td>This button is used for displaying the version information of Eximbills Enterprise.</td>
+</tr>
+</tbody>
+</table>
+<p>Function Toolbar</p>
+<p>The buttons on this toolbar are shortcuts to some of the functions that are in
+the Function Group lists of the EE Utility window. The buttons may also be
+accessed from the Function menu on the menu bar.</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/da57e2b87fc777ed1ca631132682ee3c.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<p><strong>Figure 2. 4 Function Toolbar Buttons</strong></p>
+<table>
+<thead>
+<tr>
+<th>Button</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong><img src="media/fe3ec232e190df1883537ad0a4c5678b.png" alt=""> Set System Parameter</strong></th>
+<th></th>
+<th>This button is used for accessing the System Parameter function. The function may also be accessed from the Parameter Manage group under the Function menu.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/5ebff936aac0de32ba0cc769b564b1ef.png" alt=""> Manage Component</strong></td>
+<td></td>
+<td>This button is used for accessing the Component Manage function. The function may also be accessed from the Parameter Manage group under the Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/4cbc39486ff42ee7f21edd85a278ee1a.png" alt=""> Calculation</strong></td>
+<td></td>
+<td>This button is used for accessing the Calculation function. The function may also be accessed from the Parameter Manage group under the Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/24ba6117c622573416fd7ac7833ee937.png" alt=""> Module/Event Configuration</strong></td>
+<td></td>
+<td>This button is used for accessing the Module &amp; Event function. The function may also be accessed from the Transaction Function group under the Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/298be656d60261d63d7662576eef8d0d.png" alt=""> Transaction Function Configuration</strong></td>
+<td></td>
+<td>This button is used for accessing the Transaction Function. The function may also be accessed from the Transaction Function group under the Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/f170dbf166e0234258e5e302517a3611.png" alt=""> Form Set</strong></td>
+<td></td>
+<td>This button is used for accessing the Form function. The function may also be accessed from the Transaction Function group under the Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/455f318349bfcba466f969ce29acb097.png" alt=""> Accounting Rule Setting</strong></td>
+<td></td>
+<td>This function is used for accessing the Accounting Rules function. The function may also be accessed from the Transaction Function group under the Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/ab114ac1262e11bf9766b505d46cd200.png" alt=""> Field Conversion</strong></td>
+<td></td>
+<td>This button is used for accessing the Field Conversion function. The function may also be accessed from the Maintenance group under the Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/385ca72097e8bf1a3f54acb8912aac44.png" alt=""> Get Data</strong></td>
+<td></td>
+<td>This button is used for accessing the Get CUBK function. The function may also be accessed from the Transaction Function group under the Transaction Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/0cf0c4062c2dd3bba4ec43b2f4f3fe2a.png" alt=""> Output Device</strong></td>
+<td></td>
+<td>This button is used for accessing the Output Device function. The function may also be accessed from the System Function group under the Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/e6ea8230c7c69203bc798a2038656f0b.png" alt=""> Function Group</strong></td>
+<td></td>
+<td>This button is used for accessing the Function Group function. The function may also be accessed from the System Function group under the Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/6d5d1935c7dd57be30b93ee139a48ec6.png" alt=""> Clause</strong></td>
+<td></td>
+<td>This button is used for accessing the Clause function. The function may also be accessed from the Transaction Function group under the Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/0e0ade657ea047e990a53d567d095172.png" alt=""> Protocol Manager</strong></td>
+<td></td>
+<td>This button is used for accessing the Protocol Manager function. The function may also be accessed from the System Function group under the Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/29ce5ae5cdb680364be91bdef64d7b11.png" alt="">GAPI Setting</strong></td>
+<td></td>
+<td>This button is used for accessing the GAPI Setting function. The function may also be accessed from the Transaction Function group under the Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/839f0b5aafefeb46806e9adff5a38632.png" alt=""> STP Setting</strong></td>
+<td></td>
+<td>This button is used for accessing the STP Setting function. The function may also be accessed from the System Function group under the Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/e814b50d94347b11cd498d7d97d22eb4.png" alt=""> Message Broker Setting</strong></td>
+<td></td>
+<td>This button is used for accessing the Message Broker Setting function. The function may also be accessed from the Transaction Function group under the Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/58c04f7fc36d109621e8fca52de3d502.png" alt=""> Amount Format Setting</strong></td>
+<td></td>
+<td>This button is used for accessing the Amount/Rate Format function. The function may also be accessed from the Transaction Function group under the Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/01bade76e440607cadb65da1894e51d3.png" alt=""> Report</strong></td>
+<td></td>
+<td>This button is <em>reserved for future</em> <em>use</em>.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/40052f2f6f77a753ee72cbdbb3c66ef0.png" alt=""> Transfer To</strong></td>
+<td></td>
+<td>This button is used for accessing the Transfer To function. The function may also be accessed from the Transaction Function group under the Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/c68876141662158af835fd1ed52c9e6e.png" alt=""> DB Dictionary</strong></td>
+<td></td>
+<td>This button is used for accessing the DB Dictionary function. The function may also be accessed from the Maintenance group under the Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/00c30f2658419243c33ca817230614b9.png" alt=""> XML Generator</strong></td>
+<td></td>
+<td>This button is used for accessing the XML Generator function. The function may also be accessed from the Maintenance group under the Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/a0a275ccb15a965f9d1fc308acff577a.png" alt=""> Fix Data</strong></td>
+<td></td>
+<td>This button is used for fixing any of the following issues: Fix DO Template Screen Delete DO Template Missing Fields Delete Duplicated Records Clean Unused Rule Correct SWIFT Message Rule Name Id and Module Clean Amount Rule</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/255b5b7de3eb2f268372107c09cacb59.png" alt=""> Migrate to Web</strong></td>
+<td></td>
+<td>This button is used to migrate error messages and time zone settings from the Meta database into the Security database.  <strong>NOTE:</strong> i. Refer to the <em>EE Security Manager</em> manual for more information on migrating error messages in the Security Manager. ii. Refer to the <em>EE Standing Data Module</em> manual for more information on migrating time zone settings in the Standing Data Module.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/34c0fb75bc0376de065a3ce2d4c77d53.png" alt=""> Business Unit</strong></td>
+<td></td>
+<td>This button is used for accessing the Business Unit Config function. The function may also be accessed from the User Manage group under the Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/10e767926e303f199b0df12fec6aa56c.png" alt=""> User Manager</strong></td>
+<td></td>
+<td>This button is used for accessing the User Manage function. The function may also be accessed from the User Manage group under the Function menu.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong><img src="media/361f9f96a56d108aa4dfcdb1aa442545.png" alt=""> Data Source Manager</strong></td>
+<td></td>
+<td>This function is used for accessing the Data Source Manage function. The function may also be accessed from the User Manage group under the Function menu.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Popup Menu</p>
+</blockquote>
+<blockquote>
+<p>Inside a function or configuration window, options may be provided in the
+form of a popup menu. This menu is displayed by right-clicking on the
+relevant window section or on the relevant setting.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><img src="media/86d2a78bc384fcf0c5300db38aed3748.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<p><strong>Figure 2. 5 Popup Menu</strong></p>
+<blockquote>
+<p>In a popup window, the following options may be made available:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Option</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>New</strong></th>
+<th></th>
+<th>This is used for creating a new parameter or rule.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Add</strong></td>
+<td></td>
+<td>This is used for adding a setting for the selected function or parameter.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Save</strong></td>
+<td></td>
+<td>This is used for saving a created or modified setting.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Edit</strong></td>
+<td></td>
+<td>This is used for editing or modifying an existing setting.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Copy</strong></td>
+<td></td>
+<td>This is used for copying or duplicating a selected setting.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Lock</strong></td>
+<td></td>
+<td>This is used for manually locking a parameter or setting to a specific user.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Unlock</strong></td>
+<td></td>
+<td>This is used for manually unlocking a locked parameter or setting.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Delete</strong></td>
+<td></td>
+<td>This is used for deleting or removing an existing setting.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Find</strong></td>
+<td></td>
+<td>This is used to search for an existing setting. Refer to the succeeding <a href="#smartsearch">Smart Search</a> discussion for more information.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Combine</strong></td>
+<td></td>
+<td>This is used in a multi entity environment. Bank-country groups are added to or removed from a domain that is assigned to a specific parameter type. Refer to the <em>EE Multi Entity</em> documentation for more information.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Help</strong></td>
+<td></td>
+<td>This is <em>reserved for future</em> <em>use</em>.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Other EE Utility Features</p>
+</blockquote>
+<blockquote>
+<p>The EE Utility provides the following additional features:</p>
+</blockquote>
+<ul>
+<li>
+<p>Smart Search</p>
+</li>
+<li>
+<p>Function Name Fields</p>
+</li>
+</ul>
+<p>Smart Search</p>
+<p>Rule names and methods may be easily searched using the Smart Search feature of
+the EE Utility. This feature may be accessed by right-clicking on the
+appropriate window and selecting the Find option from the popup menu that is
+displayed, or by pressing ctrl+F on the keyboard.</p>
+<blockquote>
+<p><strong><img src="media/13099c096d4831a51504e46c0b962a98.gif" alt="note">NOTE:</strong> The Smart
+Search feature may be applied on dropdown lists, tables, lists, or tree
+nodes. Refer to the <em>EE FAQs</em> documentation for more information on this
+feature.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><strong><img src="media/532783d0454c94350ccb9b68f5bcebd6.jpg" alt=""></strong></th>
+</tr>
+</thead>
+</table>
+<p><strong>Figure 2. 6 Smart Search</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong><img src="media/afdd091b46516e6d67a692e179e9d518.jpg" alt=""></strong></th>
+</tr>
+</thead>
+</table>
+<p><strong>Figure 2. 7 Find Window</strong></p>
+<p>The following items are provided in the Find window for searching for particular
+texts.</p>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Column Name</strong></th>
+<th></th>
+<th>This field is used to specify the type of name to be searched (e.g., rule name, method name, etc.). Available values may be selected from the dropdown list, or, may be manually specified.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Column Value</strong></td>
+<td></td>
+<td>This field is used to specify the actual text to be searched based on the Column Name (e.g., IPLC_Issuance). Available values may be selected from the dropdown list, or, may be manually specified.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Direction</strong></td>
+<td></td>
+<td>Mark the direction or checking sequence of the search: Forward, Backward, or Wrap_search. If the search is to be performed in any direction (i.e, within all available content for searching), mark the Wrap_search option.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Case Sensitive</strong></td>
+<td></td>
+<td>Mark this flag if the search must consider the letter case (i.e., uppercase or lowercase) in which the word that is specified in the Column Value field is defined.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Whole Word</strong></td>
+<td></td>
+<td>Mark this flag if the search must consider the whole word specified in the Column Value field. <strong>NOTE:</strong> If this flag is not marked, the text specified in the Column Value field may be searched as a part of a whole word (e.g., prefix, suffix).</td>
+</tr>
+</tbody>
+</table>
+<p>This feature may be applied in the following functions.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Function</strong></th>
+<th><strong>Search Box Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>User Manage Function Group</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Business Unit Config</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td>DataSource Manage</td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td></td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>List</td>
+</tr>
+<tr>
+<td>User Manage</td>
+<td>List</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td>Audit Log</td>
+<td>Drop Down box</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td><strong>Parameter Manage Function Group</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Component Manager</td>
+<td>Drop Down box</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Tree</td>
+</tr>
+<tr>
+<td>Calculation</td>
+<td>Drop Down box</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Tree</td>
+</tr>
+<tr>
+<td>Language Configuration</td>
+<td>Drop Down box</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td>Security Parameters</td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>Server</td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>System Parameter</td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down box</td>
+</tr>
+<tr>
+<td>User Class</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down box</td>
+</tr>
+<tr>
+<td>User Authority</td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Tree</td>
+</tr>
+<tr>
+<td><strong>System Function Group</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Function Group</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>Domain</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>List</td>
+</tr>
+<tr>
+<td>Output Device</td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>List</td>
+</tr>
+<tr>
+<td></td>
+<td>Tree</td>
+</tr>
+<tr>
+<td>Protocol Manager</td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>STP Setting</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td>Say Total</td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td><strong>Transaction Function Group</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>Accounting Rules</td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Tree</td>
+</tr>
+<tr>
+<td>Amount/Rate Format</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td>Archiving</td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Tree</td>
+</tr>
+<tr>
+<td>Attribute</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>Batch Manager</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td>Catalog</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td>Clause</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>List</td>
+</tr>
+<tr>
+<td>Event Driven</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td>EDI Form</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td>Form</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td></td>
+<td>List</td>
+</tr>
+<tr>
+<td>GAPI Setting</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>Get CUBK</td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>Get DO DATA</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>Message Broker Setting</td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>Module&amp;Event</td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>Report Template</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>Screen</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td>Server Side JS</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>Subtask</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>List</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>SWIFT</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>System Maintain</td>
+<td>Table</td>
+</tr>
+<tr>
+<td>Message Mapping</td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>List</td>
+</tr>
+<tr>
+<td>Transfer To</td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>Transaction Function</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>List</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td><strong>Maintenance Function Group</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>DB Dictionary</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>List</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>Multi Language</td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>Field Conversion</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>XML Generator</td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>List</td>
+</tr>
+<tr>
+<td>Copy Module</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>Data Dictionary Mapping</td>
+<td>Table</td>
+</tr>
+<tr>
+<td>Version Control Tools</td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>List</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>SOA Setting</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>SOA Calculation</td>
+<td>Tree</td>
+</tr>
+<tr>
+<td></td>
+<td>List</td>
+</tr>
+<tr>
+<td></td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>Drop Down Box</td>
+</tr>
+<tr>
+<td>Hand Writing Editor</td>
+<td>Table</td>
+</tr>
+<tr>
+<td></td>
+<td>List</td>
+</tr>
+<tr>
+<td></td>
+<td>Tree</td>
+</tr>
+</tbody>
+</table>
+<p>Function Name Fields</p>
+<p>The EE Utility does not permit adding a space on Name fields in functions (i.e.,
+the space key cannot be used when a rule name is added manually). If, on the
+other hand, the rule name is specified by using the Paste functionality, the
+system displays a message confirming if the spaces are to be automatically
+removed. DCS Amount</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/60f21e6dc0d88cbc17dd7a42fff3aae5.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<p><strong>Figure 2. 8 Confirmation Message</strong></p>
+<p>The following are the functions that include a Name field:</p>
+<ul>
+<li>
+<p>Calculation - Common Setting, Function Level, and Screen Level</p>
+</li>
+<li>
+<p>Function Relation Editor</p>
+</li>
+<li>
+<p>Function Group</p>
+</li>
+<li>
+<p>Domain - Default Domain and Parameter-Type Domain</p>
+</li>
+<li>
+<p>Mail</p>
+</li>
+<li>
+<p>Protocol Manager</p>
+</li>
+<li>
+<p>Accounting Rules</p>
+</li>
+<li>
+<p>Archiving</p>
+</li>
+<li>
+<p>Attribute</p>
+</li>
+<li>
+<p>Batch Manager</p>
+</li>
+<li>
+<p>Catalog</p>
+</li>
+<li>
+<p>Clause</p>
+</li>
+<li>
+<p>Event Driven</p>
+</li>
+<li>
+<p>EDI Form</p>
+</li>
+<li>
+<p>Form</p>
+</li>
+<li>
+<p>GAPI Setting</p>
+</li>
+<li>
+<p>Get CUBK</p>
+</li>
+<li>
+<p>Get DO DATA</p>
+</li>
+<li>
+<p>Message Broker Setting</p>
+</li>
+<li>
+<p>Module&amp;Event</p>
+</li>
+<li>
+<p>Report Template</p>
+</li>
+<li>
+<p>Screen</p>
+</li>
+<li>
+<p>Server Side JS</p>
+</li>
+<li>
+<p>Subtask</p>
+</li>
+<li>
+<p>SWIFT</p>
+</li>
+<li>
+<p>Message Mapping</p>
+</li>
+<li>
+<p>Transfer To</p>
+</li>
+<li>
+<p>Transaction Function</p>
+</li>
+<li>
+<p>Multi Language</p>
+</li>
+<li>
+<p>Version Control Tool</p>
+</li>
+<li>
+<p>Hand Writing Editor</p>
+</li>
+</ul>
+<p>Generating the XML Parameter Files</p>
+<p>The created parameters and business logic are stored in the database as Meta
+data. For this Meta data to be accessible to the application server and the web
+server, it has to be converted to XML – the format used for the communication
+between the client and the server.</p>
+<p>The parameter files are typically generated through the XML Generator function
+manually. Except for the Calculation parameter, the files generated from the XML
+Generator function are all XML files. The generated files for the Calculation
+parameter are JavaScript files.</p>
+<p>The AUTO_GENERATE_XML_CONTROLER System Parameter</p>
+<p>How the parameter files are generated depends on the value of the
+AUTO_GENERATE_XML_CONTROLER system parameter.</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/e716ea5a8c56d2bf546c68fa186ac653.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<p>Figure 2. 9 AUTO_GENERATE_XML_CONTROLER</p>
+<p>Defined through the System Parameter function, this may be set to any of these
+values:</p>
+<ul>
+<li>
+<p>Generate and Ask: After a parameter setting or configuration is saved, the
+system displays a message confirming whether the XML files are to be
+generated. Upon user confirmation, the XML files are automatically
+generated.</p>
+</li>
+<li>
+<p>Not Generate: The XML files are not automatically generated; these must be
+manually generated through the XML Generator function.</p>
+</li>
+<li>
+<p>Generate and Not Need Ask: The system automatically generates the XML files
+after a parameter or configuration is saved.</p>
+</li>
+</ul>
+<p>If no value (null) is defined for this system parameter, the system does not
+automatically generate the XML files. This is essentially the same as the Not
+Generate parameter value.</p>
+<p>Manual Generation of Parameter Files</p>
+<p>To generate the XML parameter files manually:</p>
+<table>
+<thead>
+<tr>
+<th>Do the following …</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>1. Log on the EE Utility as an Administrator or Operator user with rights to the XML Generator function.</th>
+<th></th>
+<th><img src="media/d8595810d772fab9abf4d7336fce9b9a.png" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2. The EE Utility window is displayed. Run the XML Generator function from the Maintenance function group.</td>
+<td></td>
+<td><img src="media/9683191c6afa3fab3708f046576ccc47.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3. The XML Generator function window is displayed. When there are newly defined or modified parameters, the Meta Data to XML window is also displayed. It lists these parameters for easy selection. In this case, the parameter can be selected from this window and the Apply button clicked. Afterwards, proceed to Step 5. Alternatively, the Meta data or parameter can be manually selected from the main XML Generator window. In this case, click on the Close button of the Meta Data to XML window and proceed to Step 4.</td>
+<td></td>
+<td><img src="media/71915503734f76f7d4751c102006e283.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4. Double-click on the relevant parameter type from the XML Generator window.</td>
+<td></td>
+<td><img src="media/eca9def89e7d8054cba64c4a8cdcd390.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5. Depending on the selected parameter type, an XML configuration window may be displayed. In other cases, the process directly proceeds from Step 3 or 4 to Step 6. If a configuration window is displayed, specify the exact or any additional setting required to generate the relevant XML files. When the specifications are defined, click on the Save button.</td>
+<td></td>
+<td><img src="media/068f39029266c66c77b0d744943f4f95.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6. A message is displayed confirming if the XML files are to be generated on the system path.</td>
+<td></td>
+<td><img src="media/ec0c6dc19b44b3b5629449ae9aaa8703.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>NOTE:</strong> The default path of the XML files is defined through the GEN_XML_ROOTPATH Utility Workbench system parameter. This system parameter is configured through the System Parameter function from the Parameter Manage function group.</td>
+<td></td>
+<td><img src="media/287ab279c8e9c098aeac5a6933c8caf3.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7. To save the XML file on the system path, click on the Yes button. To specify another path, click on the No button. In the Save dialog box that is displayed, browse for the path and click on the Save button.</td>
+<td></td>
+<td><img src="media/acc0c7a3f6e7f74473d4141e1ac8c13c.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8. When the relevant XML files are generated, the system displays a confirmation message.</td>
+<td></td>
+<td><img src="media/0bd0907ed9ce75f5be9c4e49a71620ab.jpg" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Click on the Detail button to list the paths of the generated XML files.  <strong>NOTE:</strong>  To hide this information, click on the Hide button.</td>
+<td></td>
+<td><img src="media/248275457ee77b74949e0fe6b3199cd4.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>NOTE:</strong> Check the indicated paths to see the generated XML files.</td>
+<td></td>
+<td><img src="media/c296842415589888dd5fb99e75407d06.png" alt=""></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong><img src="media/13099c096d4831a51504e46c0b962a98.gif" alt="note">NOTE:</strong> For additional
+information on the XML Generator function, refer to the <em>EE Utility
+Reference - Maintenance Functions</em> manual.</p>
+</blockquote>
+<p>Building an EE Module</p>
+<p>An EE module represents a product or service of a bank. In trade finance, for
+example, an EE module may be created to automate the processes involved in an
+Import LC transaction. A transaction module consists of transaction functions,
+each with its own properties and attributes. The settings that pertain to
+modules and functions are called parameters; these are configured through the EE
+Utility.</p>
+<blockquote>
+<p><img src="media/dbcc08f02d55bf00c6d727f95e13c20c.png" alt="note">NOTE:</p>
+</blockquote>
+<blockquote>
+<p>i. One of the preliminary steps in creating a module is the GAP analysis. It
+is through this that the requirements of the transaction are determined;
+this includes the required fields for data input and the types of output
+that must be generated. Once the business requirements are identified and
+the required preparations are made, the project team may then start building
+the modules.</p>
+</blockquote>
+<blockquote>
+<p>ii. For detailed information on building a module, refer to the <em>EE Building
+a Module</em> documentation.</p>
+</blockquote>
+<blockquote>
+<p>Basic Steps</p>
+</blockquote>
+<blockquote>
+<p>The general processes involved in the creation of a transaction module are
+as follows.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Steps in Building a Module</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Access the EE Utility.</strong> Log on the EE Utility as an Administrator or Operator type of user. Only these types of users can access the EE Utility for building parameters.  User profiles are set up through the User Manager function in the User Manage function group.</th>
+<th></th>
+<th><img src="media/56ccd54e0f6c78dcfe89bd6957f00b64.png" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Create the module and events.</strong> Configure the module and the projected events that manage the transaction flow within the module.  This is set up through the Module and Event function in the Transaction Function group.</td>
+<td></td>
+<td><img src="media/a8c6b6ae8e28b8dee6dc284b1260bb6d.jpeg" alt="jo1"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Create the transaction tables.</strong> There are several types of tables. In building a module, it is mandatory to create the module’s Master and Ledger tables.  This is set up through the DB Dictionary function in the Maintenance function group.</td>
+<td></td>
+<td><img src="media/2d63aa84f30acf981deca97bfe05889d.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Define the EE fields for the transaction tables.</strong> Define the fields and field properties for the transaction tables.  This is set up through the DB Dictionary function in the Maintenance function group.</td>
+<td></td>
+<td>Add the relevant fields to the transaction tables through the Reformat tab of the DB Dictionary function. <img src="media/f433e3231ac647e3ace4034285214eba.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Assign the transaction tables to the relevant schema.</strong> Assign the created transaction tables to a particular schema. The types of schemas are EXIMSYS, EXIMTRX, and EXIMUSER. Once done, perform the Reformat process to import the data to the database.  This is set up through the DB Dictionary function in the Maintenance function group.</th>
+<th></th>
+<th>Through the Reformat tab of the DB Dictionary function: 1. Assign the transaction tables to the relevant schema. <img src="media/8446d3059662204aadbabb87d9e740a8.png" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>2. Perform the Reformat process to commit the changes made to the database. The Reformat Preview window provides an overview of the outcome of the Reformat process. <img src="media/10531a55f137d1fa5198a1e6af99552f.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Create the functions.</strong> Create the functions to be used.  This is set up through the Transaction Function in the Transaction Function group.</th>
+<th></th>
+<th>Run Transaction Function and select the module in which the function is to be included. Create the new transaction function and define its properties. <img src="media/9aa00a99b786a69ab4523c3c167efbaf.png" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Design or modify the JSP files to create the transaction function screen.</strong> The JSP files can be modified using an HTML editor. Style sheets can be applied to these files for uniformity of look and feel.</td>
+<td></td>
+<td><img src="media/b96fa93afc3a63df924b2cbb221ab66b.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Create the transaction parameters.</strong> Each transaction is associated with specific parameters or properties such as screens, attributes, catalogs, accounting vouchers, SWIFT forms, GAPI settings, and Transfer To rules.  These are set up in separate functions in the Transaction Function group.</th>
+<th></th>
+<th><em>Screen:</em>  A Screen rule pertains to a parameter setting that points to the JSP file (s) to be used as an actual transaction screen. Define the Screen rule through the Screen function. <img src="media/3d7303f58ba5ad9e3dc640482a978dd3.png" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><em>Attribute:</em> Attributes are business components that regulate the behavior of functions in processing transactions. Define the Attribute rule through the Attribute function. <img src="media/c7316abc379122f1542cdb73e506b2f7.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><em>Catalog:</em> A catalog is a set of instructions utilizing query criteria that are to be applied in the retrieval of specific records for transaction record inquiry or processing. If the transaction function requires a catalog, create the Catalog rule through the Catalog function. <img src="media/ae7f630d3cf9b42b0a2921fa0a4df3a4.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Attach the transaction parameters to the function.</strong> The created parameters must be attached to the relevant function.  This is set up through the Transaction Function in the Transaction Function group.</td>
+<td></td>
+<td>Access the relevant module, event, and transaction function. Attach the relevant parameter rules accordingly. <img src="media/dbbe97d525fa58807938997d59fa9678.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Create a function group:</strong> Organize the functions of a module in separate logical function groups.  This is set up through the Function Group function in the System Function group.</td>
+<td></td>
+<td>1. Create a function group through the Function Group function. <img src="media/c8f9cccf8b28c0600e4801f48bfff91f.png" alt=""> 2. Assign the relevant functions to this function group. <img src="media/ac5614d82e159a9f3028eec65f4e47d8.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Define the calculations and validations.</strong> Apply the calculation and validation rules to manage the behavior and population of fields, and to determine the validity of entries for the transaction.  This is set up through the Calculation function in the Parameter Manage function group.</td>
+<td></td>
+<td><img src="media/0f0c464b17a1460f7d774b3abaa10eb4.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Define the settings for the transaction input.</strong> Certain parameters pertain to the input of data into the transaction.  Settings for Field Conversion, Amount/Rate Format, Clauses, Get CUBK, Reference Number, and Data Objects are defined in specific functions in the EE Utility.</td>
+<td></td>
+<td><em>Clauses:</em> These pertain to descriptions, details, narratives, or message contents that are commonly or frequently used in the transactions.  1. Define the Clause settings through the Clause function. <img src="media/fe48966f47e08753bab0ea898aff656f.png" alt=""> <img src="media/dd78ca3b37c36bdbc81c301391becb9a.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>2. Add the clause button to the relevant JSP screen. When clicked, this displays the Insert Clause window from which the clause templates can be selected and their values populated on to the corresponding transaction field. <img src="media/51f204dcecf313d786375a58f07fdd88.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>3. Through the Calculation function, define the rules for populating the clause field. <img src="media/5c8571e6c442329f47eb9683e400640e.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><em>Reference Numbers:</em> 1. In the EE browser, access the Add Reference Number function of the Standing Data module. Specify the relevant details for the Reference Number rule and confirm the setting. This setting must then be released by a user with Release rights for the changes to take effect. <img src="media/f49ec72f513312595d55fff63cf57c92.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>2. Through the Calculation function, define the methods for the automatic generation of reference numbers at runtime with the use of the Reference Number rule created earlier. <img src="media/7c321f2ec2d6fb30da889346df5fbc12.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><em>Dropdown List Values:</em> Define the options or values of a field dropdown list through the Field Conversion function. <img src="media/8cec8b1374b8aefd86b747a2f2f59226.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><em>Lookup Buttons:</em> A lookup button enables certain information from the database to be retrieved into specific fields on the transaction screen. 1. Define the rule through the Get CUBK function.  <img src="media/42a8e60cc8c03298d1dcb180e67a1356.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>2. Set up the Get CUBK button in the transaction JSP file, and define the relevant calculation rules. <img src="media/25c5398f01a03b9051bb301ec83cba81.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><em>Amount and Rate Format:</em> Define the format of Amount and Rate fields through the Amount/Rate Format function. <img src="media/2d51ba32210ffbf6fe3cbebda67141c2.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Define the settings for the transaction output.</strong> The settings for the output generated during the transaction process are set up through the functions in the Transaction Function group.</td>
+<td></td>
+<td><em>Forms:</em> Configure the form or document output through the Form function. <img src="media/28087aa000af9d30ce21840cea8c3db1.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><em>Accounting Vouchers:</em> Define the details of the output voucher through the Accounting Rules function. <img src="media/31df1dc5de40b35b25109109bd9b78ef.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><em>SWIFT Messages:</em> Through the SWIFT function, create the SWIFT template message and other SWIFT settings. <img src="media/241567843497a80a65347a4f332e13e0.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Attach the defined output rules to the transaction function.</strong> This is set up through the Transaction Function in the Transaction Function group.</td>
+<td></td>
+<td><img src="media/bbda47025157195ab8a42d388b0f0685.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Generate the XML Files.</strong> The parameters and business logic are stored in the database as Meta data. For this Meta data to be accessible to the application server and the web server, it has to be converted to XML – the format used to communicate between client and server. For the parameters to apply, the related XML files must be generated. Manual generation of the XML files is performed through the XML Generator function.</td>
+<td></td>
+<td><img src="media/0bad50f54ec3b47f277b272d4e9c6d11.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Assign the function group to a user.</strong> Newly created function groups must be assigned to a business unit and the relevant user in order to make the module, function group, and its functions available to the user.  This is performed through the Security Manager in the EE browser.</td>
+<td></td>
+<td>1. Log on the EE browser as a Super Officer user with Create rights. <img src="media/28123cd574134682aeb1df9cd255110b.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>The system displays the Security Module. Through the Edit Business Unit Function, assign the function group to the relevant business unit. <img src="media/f11388ec6f05c5e8ba217b53d7b9a4dd.png" alt=""> This setting must then be released by a Super Officer user with Release rights for the changes to take effect.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>2. Log on as a Process Center Administrator of the business unit to which the function group is assigned. <img src="media/d9809e5f2c787363771b40131d372cfc.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>The system displays the Security Module. Through the Edit User function, assign the function group to an Operator user.  <img src="media/97b4c1beecfd2ac4e7f0815f3ffd1065.png" alt=""> This setting must then be released by a Process Center Administrator with Release rights for the changes to take effect.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td>3. Log on the EE browser as the Operator user to which the relevant function group is assigned.  <img src="media/75a4aa1c059efe530a6b787b4dbb0a5f.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>The created module, function group, and the functions attached to this group are then displayed for use. <img src="media/f2fca45ae2d8eac8d50f36b9df8134df.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<blockquote>
+<p>Function Relation</p>
+</blockquote>
+<blockquote>
+<p>The Function Relation functionality of the EE Utility is used for checking
+the records and sub records that are used by other records. It is especially
+useful when deleting a record: whether or not a record is used by other
+records is verified. Most of the relations that are selected in the Copy
+Module function primarily depend on Function Relations.</p>
+</blockquote>
+<blockquote>
+<p>The primary objectives of this functionality are:</p>
+</blockquote>
+<ul>
+<li>
+<p>Describing relations between functions</p>
+</li>
+<li>
+<p>Checking relations before deleting a record</p>
+</li>
+</ul>
+<p>Describing Relations between Functions</p>
+<p>In cases when a function’s relationship (e.g., data dictionary relationship,
+such as tables and fields associated with some functions) changes, the system
+must modify the code in order to adapt the new relationship.</p>
+<p>In using the Function Relations feature, an XML file is used to store the
+relationship but not the code. In this case, if the relationship is changed, the
+system is not required to change the codes; instead, only this file must be
+modified. When a sub-parameter is deleted, this file describes how to find the
+parameters that use it. For example, if a transaction function is deleted, it
+checks if the Calculation function uses it but does not check the Screen or
+Attribute setting.</p>
+<p>Checking Relations before Deleting a Record</p>
+<p>When deleting a record, the system displays all the other related records before
+proceeding with the deletion process. This avoids the generation of junk data.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Example</strong> The user deletes a record. <img src="media/b4fe3efd1999104538867e8041e2eadc.png" alt="">  The EE Utility then loads the Function Relation tool. To proceed with checking the function relations that are defined in the XML file, click on the Next button. <img src="media/2c170febec1f144325e955b1ab20930c.png" alt="">     The EE Utility proceeds with the checking process. <img src="media/1461fcf9e5ddffeac7af919a4fbb7bf4.png" alt="">  If the record is used by other records, the EE Utility displays the related records’ information, and the Delete operation is discontinued. <img src="media/d087edaf7220eb00318f7a12c5f585e0.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<p>The User Manage Function Group</p>
+<ul>
+<li>
+<p>User ManageR Functions</p>
+</li>
+<li>
+<p>AUDIT LOG</p>
+</li>
+<li>
+<p>User Manage</p>
+</li>
+</ul>
+<p>User Manager Functions</p>
+<p>The User Manage function group includes functions that are used for defining and
+modifying the Business Unit settings, data source settings, and EE Utility user
+settings. These functions are:</p>
+<ul>
+<li>
+<p>Business Unit Config</p>
+</li>
+<li>
+<p>Data Source Manage</p>
+</li>
+<li>
+<p>User Manage</p>
+</li>
+<li>
+<p>Audit Log</p>
+</li>
+</ul>
+<p>The functions that are accessible in this function group depend on the type of
+EE Utility user that is logged on the system. Refer to the table below for the
+User Manager functions that are accessible for each EE Utility user type.</p>
+<table>
+<thead>
+<tr>
+<th><strong>USER</strong></th>
+<th><strong>BUSINESS UNIT CONFIG</strong></th>
+<th><strong>DATA SOUCRE MANAGE</strong></th>
+<th><strong>USER MANAGE</strong></th>
+<th><strong>AUDIT LOG</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Super Administrator</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Administrator</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Operator</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>For the Administrator user, the Audit Log and User Manage functions are
+accessible. The Operator, on the other hand, only has access to the Audit Log
+function.</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/51165605f129f1587bd569414d8bbb11.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<p>Figure 3. 1 User Manage Function Group</p>
+<blockquote>
+<p><img src="media/dbcc08f02d55bf00c6d727f95e13c20c.png" alt="note">NOTE:</p>
+</blockquote>
+<blockquote>
+<p>i. This document includes information on configuring settings in the Audit
+Log and User Manage functions, which may be accessed by an Administrator or
+Operator User. For a detailed discussion on using the Business Unit Config
+and Data Source Manager functions, which are only accessible to the Super
+Administrator user, refer to the <em>EE System Administration Functions</em>
+manual.</p>
+</blockquote>
+<blockquote>
+<p>ii. Examples of the logon details for the Administrator user are as follows:</p>
+<p>- User Id: HT_Admin<br>
+- Password: HT_Admin</p>
+</blockquote>
+<blockquote>
+<p>iii. Examples of the logon details for the Operator user, which has access
+to the Audit Log function, are as follows:<br>
+- User Id: HT_Opert<br>
+- Password: HT_Opert</p>
+</blockquote>
+<p>Audit Log</p>
+<p>The EE system has the capability to back up or keep records of add, edit, and
+delete operations performed by the Administrator and Operator users during
+parameterization. The Audit Log function not only allows the retrieval of the
+history of modifications or configurations done in the EE functions, but also
+the restoration of parameters which have been added, or modified, but not
+deleted. The logs generated through this function may also be exported to and
+saved in an excel file.</p>
+<blockquote>
+<p><img src="media/dbcc08f02d55bf00c6d727f95e13c20c.png" alt="note">NOTE: Copy operations
+performed in the Copy Module function do not generate retrievable records
+for the Audit Log function.</p>
+</blockquote>
+<p>This function is accessible only to Administrator and Operator users.</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/43923aacc7269e7ef1ad7e8b330a6523.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<p>Figure 3. 2 Audit Log Function Window</p>
+<blockquote>
+<p><img src="media/dbcc08f02d55bf00c6d727f95e13c20c.png" alt="note">NOTE: The parameter
+versions that are recorded in the logs may later be restored by setting the
+value of the IS_BACKUP_RESTORE_INFO system parameter to TRUE.</p>
+</blockquote>
+<blockquote>
+<p><img src="media/122f27c4126ff1fe2c8496b613bd4bec.png" alt=""></p>
+</blockquote>
+<blockquote>
+<p>If the value of this parameter is set to TRUE, the system automatically
+generates a backup of a modified parameter in .zip format. This ZIP file is
+then saved into and retrieved from the ECD_VC_HISTORY table in the EXIMMETA
+schema. For information on restoring parameters in the Audit Log function,
+refer to the <a href="#restoring_para">Restoring Parameters</a> discussion.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><strong>Generating Logs in the Audit Log Function</strong> Audit logs are not only generated when add, edit, and delete operations are performed. These logs are also generated for every import process run through the Copy Module function, and Reset processes through the DB Dictionary function. Depending on the EE function run, a log may immediately be generated when a parameter rule or a new setting is defined.  <strong>EXAMPLE</strong>: When an EE custom type is added through the DB Dictionary function, a log of the Add operation is generated. Run the DB Dictionary function and add a custom type in the Reformat tab.  <img src="media/8a7c4c0d52767d8c986cb4d8390d2974.jpeg" alt="UserMan3"></th>
+</tr>
+</thead>
+</table>
+<p>Run the Audit Log function and check the record added to the history file:</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/c3b546ba45cca7ededd1541a5239a105.jpeg" alt="UserMan4"></th>
+</tr>
+</thead>
+</table>
+<p>A .zip file is generated in the ECD_VC_HISTORY table in the database:</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/65b34deb88e62ade9e1ed91133d8bc06.jpeg" alt="UserMan14"></th>
+</tr>
+</thead>
+</table>
+<p>Some EE functions, however, require details to be added to the rule before logs
+are generated.</p>
+<p><strong>EXAMPLE</strong>:</p>
+<p>Run the Attribute function and add a new attribute rule to the relevant module.</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/111715790463485049a0d9e09ebe702b.jpeg" alt="UserMan9"></th>
+</tr>
+</thead>
+</table>
+<p>The addition of the new attribute rule is not recorded in the Audit Log
+function.</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/75e3165662e6f93da95efe7432c01b7d.jpeg" alt="UserMan10"></th>
+</tr>
+</thead>
+</table>
+<p>Add details to the newly defined attribute rule and save the settings.</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/b39cd9bd2bee8b3c35e022575684fdc0.jpeg" alt="UserMan12"></th>
+</tr>
+</thead>
+</table>
+<p>The new attribute setting is recorded in the Audit Log with the Type NEW:</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/011a261b5ffcd9e9d20d00f305228bd0.jpeg" alt="UserMan13"></th>
+</tr>
+</thead>
+</table>
+<p>A temporary backup file is generated on the java.io.tmpdir path. This path is
+predefined based on the machine’s operating system.</p>
+<p>Once the backup file has been stored in the ECD_VC_HISTORY table, the temporary
+file is removed from this path.</p>
+<p>The temp file contains the information to be logged in the Audit log function.
+The C_MSG_ID of the backup file generated in the ECD_VC_HSTORY table is logged
+in the temp file. Check the database:</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/cc3553cabcee56c15a162e1d297545e8.jpeg" alt="UserMan16"></th>
+</tr>
+</thead>
+</table>
+<p>When a parameter setting is modified, this operation is recorded in the system
+with the Type UPDATE. For this log to be generated, details of the relevant
+parameter must also be modified.</p>
+<p><strong>EXAMPLE</strong>:</p>
+<p>Modify the name and details of the newly created attribute rule and save the
+setting:</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/63f7685cb8655b982adb13550fcdb87f.jpeg" alt="UserMan17"></th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th><img src="media/76af1e5efeb066d581f2bac95e6771ae.jpeg" alt="UserMan18"></th>
+</tr>
+</thead>
+</table>
+<p>The log is updated accordingly.</p>
+<p><strong>NOTE:</strong></p>
+<p>In this example, two Update logs are generated: one for modifying the parameter
+rule name, and one for modifying the details of the parameter rule.</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/21666d767a349ff5858b36b94cc1ebba.jpeg" alt="UserMan19"></th>
+</tr>
+</thead>
+</table>
+<p>Two backup files for the Attribute rule are generated:</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/40a2e9308b910f4ece58086584a20684.jpeg" alt="UserMan20"></th>
+</tr>
+</thead>
+</table>
+<p>The database table is updated with the new backup files:</p>
+<table>
+<thead>
+<tr>
+<th><img src="media/d94b671f70efa09d3b11c99bd9ba9478.jpeg" alt="UserMan22"></th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th><img src="media/c1358d26bcc281c7cabdec87cc998f58.jpeg" alt="UserMan23"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Filtering Logs</p>
+</blockquote>
+<blockquote>
+<p>When viewing logs through the Audit Log function, a criterion may be defined
+to filter the log entries that are to be displayed.</p>
+</blockquote>
+<blockquote>
+<p>Defining the Filter Criteria</p>
+</blockquote>
+<blockquote>
+<p>The Audit Log function window provides the Date and Filtering sections with
+filter options that can be used for the retrieval of history records. The
+criteria in these sections allows the user to narrow down a search by
+filtering data by Date (year, month, day), User Id, Function Name, Rule
+Name, Rule Id, and Operation Type.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><img src="media/1e897d45925b709b818b2a7760031d80.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<p>Figure 3. 3 Audit Log Function Window: Date and Filtering Sections</p>
+<blockquote>
+<p>The criteria for filtering logs can be specified by using the following
+fields:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th></th>
+<th>Field Description</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th><strong>Date</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Year</strong></td>
+<td></td>
+<td>Select from the dropdown list the year during which the operations of records are to be retrieved were performed. The default value of this field is the year of the system date.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Month</strong></td>
+<td></td>
+<td>Select from the dropdown list the month during which the operations of the records are to be retrieved were performed. The default value of this field is the month of the system date.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Day</strong></td>
+<td></td>
+<td>Select from the dropdown list the date during which the operations of records are to be retrieved were performed. The default value of this field is the day of the system date.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td><strong>Filtering</strong>  <strong>NOTE:</strong> This section can be shown or hidden by clicking on the Filtering/Filtered button in the Date section.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>User ID</strong></td>
+<td></td>
+<td>Select from the dropdown list the Id of the user that performed the operation.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Function Name</strong></td>
+<td></td>
+<td>Use this field if the records are to be filtered by function name. Select from the dropdown list the name of the function which records are to be retrieved. The function names included in the list are the functions which have existing logs for the specified date.  <strong>NOTE</strong>:  When a value from this field is selected, the Rule Name, Rule Id, and Type fields are disabled. The records with the selected Function Name are then displayed in the grid.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Rule Name</strong></td>
+<td></td>
+<td>Use this field if the records are to be filtered by rule name. Select from the dropdown list the rule name of the record to be retrieved. The options included in the list are the rule names of all parameters (e.g., Catalog, Screen, SWIFT, etc.) which have existing logs for the specified date. This list also includes the names of added, deleted, or modified system parameters, Queue and JNDI names, SWIFT Send Setting, Business Unit, Field Types and Function Group Ids.  <strong>NOTE</strong>: When a value from this field is selected, the Function Name, Rule Id, and Type fields are disabled. The records with the selected Rule Name are then displayed in the grid.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Rule ID</strong></th>
+<th></th>
+<th>Use this field if the records are to be filtered by rule Id. Select from the dropdown list the rule Id of the record to be retrieved. The options included in the list are the rule Ids of all parameters (e.g., Catalog, Screen, Transaction Function, etc.) which have existing logs for the specified date. This list also includes added, deleted, or Queue and JNDI names, SWIFT templates, Message Types, Error Message Ids, Field Type Ids, and SWIFT Send Types.  <strong>NOTE</strong>: When a value from this field is selected, the Function Name, Rule Name, and Type fields are disabled. The records with the selected Rule Id are then displayed in the grid.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td></td>
+<td>Use this field if the history records are to be filtered by operation type. Select from the dropdown list the operation type performed on a record or a parameter. The options included in the list are NEW, UPDATE, DELETE, RESTORE, IMPORT, and RESET. The IMPORT operation type refers to the Import process done through the Copy Module function, and VC_IMPORT for imports using the Version Control tool. The RESET option is displayed for the Reset process done in the DB Dictionary function.  <strong>NOTE</strong>: When a value from this field is selected, the Function Name, Rule Name, and Rule ID fields are disabled. The records with the selected Type are then displayed in the grid.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><img src="media/dbcc08f02d55bf00c6d727f95e13c20c.png" alt="note">NOTE: The Exact Match
+button is discussed in the following <a href="#exact_match">Using the Exact Match
+Option</a> section.</p>
+</blockquote>
+<blockquote>
+<p>Viewing Log Entries</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><img src="media/3f07a79fff269f9751e55dfc4a82d960.png" alt=""></th>
+</tr>
+</thead>
+</table>
+<p>Figure 3. 4 Audit Log Function Window: Log Section</p>
+<blockquote>
+<p>The details of the log entries are organized in the following columns of the
+Log section:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Columns</th>
+<th></th>
+<th>Description</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>User ID</strong></th>
+<th></th>
+<th>This column indicates the Id of the user who performed the operation recorded in the log.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Date</strong></td>
+<td></td>
+<td>This column indicates the server date when the recorded operation was performed.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Time</strong></td>
+<td></td>
+<td>This column indicates the server time when the recorded operation was performed.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Function Name</strong></td>
+<td></td>
+<td>This column indicates the name of function where the recorded operation was performed.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Old Name</strong></td>
+<td></td>
+<td>This column indicates the old name of the function before the recorded operation was performed.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>New Name</strong></td>
+<td></td>
+<td>This column indicates the updated name of the function after the recorded operation was performed.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Message Rule Name</strong></td>
+<td></td>
+<td>This column indicates the affected rule name after the recorded operation was performed.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Message Rule ID</strong></td>
+<td></td>
+<td>This column indicates the affected rule Id after the recorded operation was performed.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Module</strong></td>
+<td></td>
+<td>This column indicates the module where the recorded operation was performed.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Domain</strong></td>
+<td></td>
+<td>This column indicates the domain of where the modified or created operation was performed.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Bank &amp; Country</strong></td>
+<td></td>
+<td>This column indicates the Bank and Country Code where the recorded operation was performed.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Type</strong></td>
+<td></td>
+<td>This column indicates the type of operation performed. The options are: New Delete Update</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Local IP</strong></td>
+<td></td>
+<td>This column indicates the local IP address of the machine where the recorded operation was performed.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DB Name</strong></td>
+<td></td>
+<td>This column indicates which database was accessed for the recorded operation.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>DB Host</strong></td>
+<td></td>
+<td>This column indicates the IP address of the Database accessed for the recorded operation.  <strong>NOTE:</strong> This refers to the Data Base IP column in the Exact Match window.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>To view logs in the Audit Log function:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Do the following…</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>1. Run the Audit Log function from the User Manager function group.</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2. The Audit Log function window is displayed. The history logs of the current date are displayed by default.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3. From the Date section, select the relevant year, month, and day from the corresponding dropdown list to specify the date of the records to be retrieved.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4. The retrieved records are displayed in the grid. To filter the records, click on the Filtering button.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5. The Filtering section is displayed. Select a filter option and click on the corresponding dropdown list to select a value (e.g., GEN_WEB_ROOTPATH).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6. The records that match the filter criteria are displayed in the grid.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Using the Exact Match Option</p>
+</blockquote>
+<blockquote>
+<p>The Exact Match button is used to view the audit logs generated within a
+specific date range. Clicking on the Exact Match button displays the Exact
+Match window where a Start and End date may be specified to retrieve the
+records created, modified or deleted within that specified period.</p>
+</blockquote>
+<blockquote>
+<p>To use the Exact Match filtering option:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Do the following . . .</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>1. Access the Audit Log function and click on the Exact Match button.</th>
+<th></th>
+<th><img src="media/cef0ad1ddc223f4cad232c63383159bc.jpeg" alt="C:\\Users\\Harvey\\AppData\\Local\\Temp\\vmware-Harvey\\VMwareDnD\\d2f47436\\24.jpg"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2. The Exact Match window is displayed. In the Date Filter Select section, click on the Start button for the Start field.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3. Select the Start Date from the Date Set window that is displayed and click OK. Once done, click on the Select button for the End Date field.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4. Select the End Date from the Date Set window and click on the OK button.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5. Once the start and end dates have been defined, click on the Query button.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6. The audit logs that have been generated within the specified start and end dates are displayed.  <strong>NOTE</strong>: If the specified date is only the Start Date or only the End Date, the logs retrieved are those generated on the specified Start or End date.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7. A set of criteria may be specified in the Filter section that is displayed.  <strong>EXAMPLE 1</strong> Specify a value in the User ID field and click on the Query button (e.g., HT_Admin).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Logged operations performed by the specified user are displayed in the grid.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>NOTE</strong>: The User Id field of the Filter section is not case-sensitive. Specifying a user Id in uppercase (e.g., HT_ADMIN) displays the audit logs of user Id ht_admin, in any appearance of uppercase and lowercase characters.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EXAMPLE 2</strong> Specify a User Id in the relevant field (e.g., HT_Admin) Select a value from the Rule Name dropdown list (e.g., Contains) and specify a parameter in the corresponding field (e.g., SBLC).</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Logged operations by HT_Admin for parameter rules that contain SBLC are displayed.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>NOTE:</strong> The Rule name field of the Filter section is not case-sensitive. Specifying a rule name in lowercase (e.g., sblc) displays the records with that rule name sblc, in any appearance of uppercase and lowercase characters.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Restoring Parameters</p>
+</blockquote>
+<blockquote>
+<p>The Restore button of the Audit Log function window allows a parameter to be
+restored to its previous state. This Restore function may be used for Add,
+Update, and Import operations, except operations performed on Data
+Dictionary elements (e.g., Field Type, Module Table).</p>
+</blockquote>
+<blockquote>
+<p><img src="media/dbcc08f02d55bf00c6d727f95e13c20c.png" alt="note">NOTE:</p>
+</blockquote>
+<blockquote>
+<p>i. The parameters that are restored are retrieved from the
+EXIMMETA.ECD_VC_HISTORY table in the database. To enable the system to store
+backup information in this table, the IS_BACKUP_RESTORE_INFO system
+parameter must be set to TRUE. Refer to the <a href="#generatinglogs_in_auditLog">Generating Logs in the Audit
+Log Function</a> for information on how backup
+files are generated in the ECD_VC_HISTORY table.</p>
+</blockquote>
+<blockquote>
+<p>ii. During the restoration process, .tmp files are generated on the
+java.io.tmpdir path. This path is predefined in the operating system.</p>
+</blockquote>
+<blockquote>
+<p>To restore a parameter:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Do the following…</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>1. Run the Audit Log function from the User Manager function group.</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2. The Audit Log function window is displayed. The history logs of the current date are displayed by default.</td>
+<td></td>
+<td><img src="media/98b265c221397a636027a650a2178fd2.jpeg" alt="C:\\Users\\Harvey\\AppData\\Local\\Temp\\vmware-Harvey\\VMwareDnD\\0417502b\\4.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3. From the Date section, select the relevant year, month and day from the corresponding dropdown list to specify the date which records are to be retrieved.</td>
+<td></td>
+<td><img src="media/c64558337d84b961e016cf7c77edbe01.jpeg" alt="C:\\Users\\Harvey\\AppData\\Local\\Temp\\vmware-Harvey\\VMwareDnD\\5fcae098\\16.jpg"></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4. The retrieved records are displayed in the grid. To filter the logs, click on the Filtering button.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5. Specify the criteria for retrieving the log records. Once a value is selected from the dropdown list, the displayed records are updated accordingly.  <strong>NOTE:</strong> Refer to the <a href="#fitlering_logs">Filtering Logs</a> section of this chapter for information on using the filter options.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6. Select the parameter that is to be restored.  Click on the Restore History button.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>NOTE:</strong> For this procedure, the record to be restored is for the Attribute parameter which settings have been modified and the Rule Name has been changed from SBLC_LogTest1 to SBLC_LogTest.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7. A message is displayed confirming whether the history is to be restored. Click on the Yes button to proceed. The system proceeds with the restoration process.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8. During the restoration, the EE Utility log shows that a temporary backup file is generated on the java.io.tmpdir.  <strong>EXAMPLE:</strong> C:\Documents and Settings\Administrator\Local Settings\Temp\PARA_BACKUP\91505ea6-620-4bd1-8087-208533cfadd\export\ Attribute</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>9. Check the specified path. The backup file is generated. This file is removed from the path once the system has successfully restored the parameter.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>NOTE:</strong> The name of this file is the same as the C_MSG_ID assigned to the .zip file generated when a backup file is stored in the ECD_VC_HISTORY table. See the discussion on <a href="#generatinglogs_in_auditLog">Generating Logs in the Audit Log Function</a>.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>10. When the process is successful, two confirmation messages are displayed in succession. In both cases, click on the OK button.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>11. A record of the restore process is added in the Log section of Audit Log function.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>12. Run the relevant function and check the restored parameter.  <strong>NOTE:</strong> In this procedure, the restored parameter is the SBLC_LogTest1 and its settings.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>NOTE:</strong> If XML files have been generated prior to the restoration process, the XML Generator function must be run and the XML files for the relevant parameter regenerated.</td>
+<td></td>
+<td><img src="media/811a0aa8d0e66f7df970a1e3244d8f0d.jpeg" alt="C:\\Users\\Harvey\\AppData\\Local\\Temp\\vmware-Harvey\\VMwareDnD\\8136c039\\22.jpg"></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Exporting Logs to an Excel File</p>
+</blockquote>
+<blockquote>
+<p>The Export to Excel button of the Audit Log function window may be used to
+export the generated logs and save these in an Excel file.</p>
+</blockquote>
+<blockquote>
+<p>To export logs to an Excel file:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Do the following…</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>1. Run the Audit Log function from the User Manager function group.</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2. The Audit Log function window is displayed. The history logs of the current date are displayed by default.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3. From the Date section, select the relevant year, month and day from the corresponding dropdown list to specify the date which records are to be retrieved.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4. The retrieved records are displayed in the grid.  <strong>NOTE</strong>: The Filtering button may be clicked to display the available criteria to further filter the records.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5. Click on the Export to Excel button.</td>
+<td></td>
+<td><img src="media/9826e3b98ede9886f2202f8f7ac50ccf.png" alt=""></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>6. In the window that is displayed, browse for the path where the audit log file is to be generated. Click on the Save button.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7. The system proceeds with the export process. A message is displayed confirming that the file has been generated on the path specified.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>8. The filename of the generated EXCEL file follows this format: AuditLog[YYYY-MM-DD] YYYY-MM-DD pertains to the date earlier indicated for exporting specific audit logs.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Viewing DB Dictionary Log Details</p>
+</blockquote>
+<blockquote>
+<p>SQL statements generated after a Reformat process through the DB Dictionary
+function may be viewed and copied for use during parameterization.</p>
+</blockquote>
+<blockquote>
+<p>To view the DB Dictionary log details:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Do the following…</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>1. Run the Audit Log function from the User Manager function group.</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2. The Audit Log function window is displayed. The history logs of the current date are displayed by default.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3. Double-click on a log for a Data Dictionary element.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4. The DB Dictionary - SQL Detail Info window is displayed. To copy the SQL statement generated, click on the Copy button.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5. A confirmation is displayed. Click on the OK button.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>User Manage</p>
+<p>The User Manage function of the User Manage function group is used to create,
+modify, or delete users of the EE Utility, and to assign functions to the
+created users. There are three types of EE Utility users that may be created:</p>
+<ul>
+<li>
+<p>Super Administrator – These users who are capable of performing
+administrative tasks such as configuring business units and defining data
+sources.</p>
+</li>
+<li>
+<p>Administrator – These users have transaction module and function
+configuration rights, and are capable of creating and setting transaction
+function parameters such as GAPI rules, SWIFT settings, and accounting rules
+among others.</p>
+</li>
+<li>
+<p>Operator – These users have transaction module and function configuration
+rights.</p>
+</li>
+</ul>
+<p>Through the User Manage function, Super Administrator users can create, modify,
+or delete Administrator and other Super Administrator users. On the other hand,
+Administrator users can create, modify, or delete Operator and other
+Administrator users. Operator users do not have access to this function.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+</tr>
+</thead>
+</table>
+<p>Figure 3. 5 User Manage Function Window</p>
+<blockquote>
+<p>Creating New Users</p>
+</blockquote>
+<blockquote>
+<p>User profiles may be created or modified in the User Manage tab of the User
+Manage function window.</p>
+</blockquote>
+<blockquote>
+<p>The details of the new user profile are specified in the User Manager
+configuration window.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><img src="media/8d0644b41c4da76a6569707d7c77f385.jpeg" alt="C:\\Users\\Harvey\\AppData\\Local\\Temp\\vmware-Harvey\\VMwareDnD\\decb6b18\\23.jpg"></th>
+</tr>
+</thead>
+</table>
+<p>Figure 3. 6 User Manager Configuration</p>
+<blockquote>
+<p>This window provides the following fields:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th></th>
+<th>Field Description</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>User Type</strong></th>
+<th></th>
+<th>Select the relevant type of the user that is being created. The different types of users are: Super Administrator Administrator Operator  If logged on as a Super Administrator user, only the following options are shown: Administrator and Super Administrator. If logged on as an Administrator user, only the following options are shown: Administrator and Operator.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>User ID</strong></td>
+<td></td>
+<td>Use this field to define an Id for the new user. This accepts a maximum of 12 alphanumeric characters. The underscore (_) special character is allowed.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>New Password</strong></td>
+<td></td>
+<td>Use this field to define a password for the new user.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Confirm Password</strong></td>
+<td></td>
+<td>Confirm the specified user password in this field.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>User Name</strong></td>
+<td></td>
+<td>Use this field to specify the name of the user.  This accepts a maximum of 15 alphanumeric characters. The underscore (_) special character is allowed.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>User Desc.</strong></td>
+<td></td>
+<td>Use this field to specify a description for the new user.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Assigned By</strong></td>
+<td></td>
+<td>This field pertains to the user that is creating the new user profile. This field is protected.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Pwd History Numbers</strong></td>
+<td></td>
+<td>This is <em>currently</em> not used.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Max Password Age</strong></td>
+<td></td>
+<td>Specify in this field the maximum number of days of the validity of the defined password (e.g., If the value of this field is 10, the user password is required to be changed on the 10th day after the creation of the user or the last password change.). When a 0 value is defined in this field, the defined password is perpetually valid. A maximum of 9 numeric characters can be specified in this field.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Min Password Age</strong></td>
+<td></td>
+<td>Specify in this field the minimum number of days when the defined password can be changed (e.g., If the value of this field is 10, the user password can be changed on the 10th day after the creation of the user or the last password change.). When a 0 value is defined in this field, the defined password may be changed anytime. A maximum of 9 numeric characters can be specified in this field.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Account Lockout</strong></td>
+<td></td>
+<td>Specify in this field the maximum allowable number of incorrect password input before the account is locked by the system.  When a 0 value is defined in this field, the system ignores this feature. A maximum of 9 numeric characters can be specified in this field. If the Administrator or Operator user has reached this defined maximum allowable number of incorrect password input, the system displays the following error:</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th><strong>Is Login</strong></th>
+<th></th>
+<th>This indicates whether or not the user is currently logged on the system.  If this is set to Yes and the relevant user profile is used to log on EE Utility, the system displays the following error:    <strong>NOTE</strong>: When an Administrator or Operator user is not logged off properly, the Is Login flag is automatically set to Yes, in which case, an Administrator or a Super Administrator user must manually change the Is Login value to No to grant the user access to the system.</th>
+</tr>
+</thead>
+</table>
+<blockquote>
+<p>To create a new user profile:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Do the following . . .</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>1. From the EE Utility window, run the User Manage function of the User Manage function group.</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2. The User Manage window is displayed. There are two tabs in this window: User Manager tab and Assigned Functions tab. Right-click on the information display section of the User Manager tab and click on the Add option from the popup menu that is displayed. Alternatively, click on the Add button on the toolbar.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3. The User Manager configuration window is displayed. Specify the required information in this window. Click on the Save button when done.  <strong>NOTE:</strong> To allow the user being created to log on the system, make sure to mark the No option in the Is Login indicator. This informs the system that the user is currently not logged on the system.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4. The created user profile is displayed on the User Manager tab.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Assigning Functions to Users</p>
+</blockquote>
+<blockquote>
+<p>Each EE Utility user can be assigned with specific functions for accessing
+the system. The Assigned Functions tab of the User Manage function window is
+used to select which functions are to be assigned to a certain user type. A
+Super Administrator user can assign the functions of Administrator users,
+while an Administrator user can assign the functions of Operator or other
+Administrator users.</p>
+</blockquote>
+<blockquote>
+<p><strong><img src="media/dbcc08f02d55bf00c6d727f95e13c20c.png" alt="note">NOTE:</strong> Super
+Administrator users cannot be assigned any transaction function. Created
+Super Administrator users are automatically assigned with the same functions
+as the default Super Administrator user.</p>
+</blockquote>
+<blockquote>
+<p>To add or modify function assignment for a user:</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Do the following . . .</th>
+</tr>
+</thead>
+</table>
+<table>
+<thead>
+<tr>
+<th>1. From the EE Utility window, run the User Manage function of the User Manage function group.</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2. The User Manage window is displayed. Click on the Assigned Functions tab.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3. Right-click on the user to which functions are to be assigned and select the Edit option from the popup menu that is displayed.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4. The Assigned Functions window is displayed. The left section displays all the available functions that the user type may access. The right section displays the functions currently assigned to the user. Specify the functions to be assigned to the user using the selection buttons provided. Click on the Save button.  <strong>NOTE:</strong> The Edit Authorization section displays the following flags: Modify Formula Mode, and Not Allow Modify Formula Mode. These flags indicate whether or not a user is given authorization to use Formula Mode settings in the Calculation function.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Glossary</p>
+<p>Glossary</p>
+<blockquote>
+<p>a</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><strong>Administrator</strong></th>
+<th>The type of EE Utility user with rights to create Administrator and Operator users and define transaction function parameters such as GAPI rules, SWIFT settings, and accounting rules.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Audit Log Function</strong></td>
+<td>The EE Utility function that not only allows the retrieval of the history of modifications or configurations done in the EE functions, but also the restoration of parameters which have been added, or modified, but not deleted. The logs generated through this function may also be exported and saved in an excel file.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>B</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><strong>Baseline</strong></th>
+<th>The EE data and processing model for the bank’s trade finance and supply chain services. It consists of modules that can be executed readily to produce the required output or action.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Business Unit</strong></td>
+<td>A processing center or a branch unit of a bank-country group.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>E</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><strong>EE Utility</strong></th>
+<th>Short for Eximbills Enterprise Utility Workbench. This is the main tool for building parameters in EE.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Eximbills Enterprise (EE)</strong></td>
+<td>An integrated system that automates and audits the complete cycle of Trade Finance, Open Account, and Payments transactions, in real time and in accordance with SWIFT, UCP, and ISO20022 standards.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EXIMMETA Data Source</strong></td>
+<td>The data source that is used to store meta data.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>EXIMMETA Schema</strong></td>
+<td>The schema type that stores tables containing Meta or parameter data.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>F</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><strong>Field</strong></th>
+<th>The smallest unit that can hold data.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Function</strong></td>
+<td>A unified set of elements, operations, and configurations that produce a target setting, process, and/or output. This typically refers to an EE Utility function or a transaction function.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>I</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><strong>IS_BACKUP_RESTORE_INFO</strong></th>
+<th>A system parameter that allows the EE Utility to back up information in the EXIMMETA.ECD_VC_HISTORY table.</th>
+</tr>
+</thead>
+</table>
+<blockquote>
+<p>O</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><strong>Operator</strong></th>
+<th>The type of EE Utility user with parameter and transaction module configuration rights.</th>
+</tr>
+</thead>
+</table>
+<blockquote>
+<p>P</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><strong>Parameter</strong></th>
+<th>Any user-controlled configuration that defines a factor or logic within a set of interrelated operations; performs a specific action in a group of processes; or produces a categorical result or setting.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Parameter Drive</strong></td>
+<td>The location of the EE parameter files, one of the two main folders of an EE environment. Its path is defined in the GEN_XML_ROOTPATH system. parameter.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>S</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><strong>Schema</strong></th>
+<th>The structure and layout of objects within the database. In Oracle, a schema is associated with a specific database user and is comprised of database objects such as tables and views.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>Super Administrator</strong></td>
+<td>The type of EE Utility user with rights to administrative tasks such as configuring business units; defining data sources; and creating Super Administrator and Administrator user profiles.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>U</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><strong>Unit Code</strong></th>
+<th>The business unit code. See also Business Unit.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>User Manage function</strong></td>
+<td>A function that is used to create, modify, or delete users of the EE Utility, and to assign functions to the created users.</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>User Manage Function Group</strong></td>
+<td>The EE Utility function group that contains functions, which are used to define the business units, data source settings, user profiles, and function assignments of each user.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>X</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th><strong>XML</strong></th>
+<th>Stands for Extensible Markup Language. This is the format used by EE for the communication between the client (browser) and the server.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>XML Generator Function</strong></td>
+<td>The EE Utility function that is used to generate the corresponding XML files for a specific parameter setting.</td>
+</tr>
+</tbody>
+</table>
+
+	
+	
+	<div class="text-muted mt-5 pt-3 border-top">
+
+</div>
+
+</div>
+
+
+          </main>
+        </div>
+      </div>
+      
+<footer class="bg-dark py-5 row d-print-none">
+  <div class="container-fluid mx-sm-5">
+    <div class="row">
+      <div class="col-6 col-sm-4 text-xs-center order-sm-2">
+        
+      </div>
+      <div class="col-6 col-sm-4 text-right text-xs-center order-sm-3">
+        
+      </div>
+      <div class="col-12 col-sm-4 text-center py-2 order-sm-2">
+        
+        
+	
+		
+	
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="/js/main.min.62d5d89dda5fd5eaef8356b27f7171a800bd19917c4b1ab85ec6dca281c201f8.js" integrity="sha256-YtXYndpf1ervg1ayf3FxqAC9GZF8Sxq4XsbcooHCAfg=" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>
